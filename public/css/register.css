@@ -1,0 +1,16 @@
+.page-title {
+    letter-spacing: 3px;
+}
+
+#signup-form .btn.btn-theme {
+    min-width: 100px;
+}
+
+#signup-form .btn.btn-theme:hover {
+    box-shadow: none;
+}
+
+h3.btn {
+    border-radius: 50px;
+    font-weight: 500;
+}

@@ -1,0 +1,147 @@
+.nav-tabs {
+  border-bottom: none
+}
+
+#comments-container-1,
+#comments-container-2 {
+  border: 1px solid var(--yellow);
+  overflow-y: scroll;
+  height: 500px;
+  padding: 2rem;
+}
+
+#comments-container-mobile-1,
+#comments-container-mobile-2 {
+  border: 1px solid var(--yellow);
+  overflow-y: scroll;
+  height: 500px;
+  padding: 2rem;
+}
+
+.pk-comments {
+  position: relative;
+  max-height: 550px;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link {
+  border: 1px solid #eee;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  color: #000;
+  font-weight: 400;
+  background-color: var(--yellow);
+  border: 1px solid var(--yellow);
+}
+
+.option-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 10px solid var(--yellow);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  animation: show 1.7s ease-in-out infinite;
+  /* animation-iteration-count: 3; */
+}
+
+.option-img:hover {
+  animation: unset;
+  transform: scale(1.13);
+}
+
+button.option-img:focus {
+  outline: 0px;
+}
+
+@keyframes show {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pk-options img.vs {
+  width: 100px;
+}
+.option-name {
+  font-size: 1.2rem;
+}
+.option-vote {
+  font-size: 1.3rem;
+}
+@media screen and (max-width: 576px) {
+  .option-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .pk-options img.vs {
+    width: 40px;
+    margin-bottom: 0.8rem;
+  }
+  .option-name,
+  .option-vote {
+    font-size: 1rem;
+  }
+  .option-img {
+    border-width: 5px;
+  }
+  .modal-dialog {
+    margin: 0;
+  }
+}
+
+.progress {
+  height: 1.6rem;
+  padding: 0.15rem;
+  border-radius: 7.25rem;
+  background: #fff;
+  margin: 1.2rem 0;
+  border: 1px solid #888;
+  position: relative;
+}
+
+.progress-bar {
+  border-radius: 7.25rem;
+}
+
+.pk-comments ul:focus,
+.pk-comments li:focus,
+.pk-comments button:focus,
+.pk-comments div:focus,
+.pk-comments a:focus {
+  outline-width: 0;
+  outline-color: transparent;
+}
+
+.progress-container::before {
+    content: attr(data-percent) '%';
+    display: block;
+    position: absolute;
+    right: 1.5rem;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    height: 1.3rem;
+    z-index: 1;
+    /* color: #AC2C2C; */
+  }
+
+  .progress-container[data-side="right"]::before {
+    left: 1.5rem;
+    right: unset;
+    /* color: #194184; */
+  }

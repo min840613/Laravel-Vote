@@ -1,0 +1,28 @@
+<svg id="グループ_487" data-name="グループ 487" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.26" height="38.26" viewBox="0 0 38.26 38.26">
+  <defs>
+    <radialGradient id="radial-gradient" cx="-0.042" cy="0.162" r="1.328" gradientTransform="matrix(0.16, 0.987, -0.987, 0.16, 1.035, 0.745)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fded00"/>
+      <stop offset="0.082" stop-color="#fdbf1c"/>
+      <stop offset="0.211" stop-color="#fe7d46"/>
+      <stop offset="0.319" stop-color="#fe4d64"/>
+      <stop offset="0.402" stop-color="#fe3077"/>
+      <stop offset="0.449" stop-color="#ff257e"/>
+      <stop offset="0.514" stop-color="#e72589"/>
+      <stop offset="0.651" stop-color="#ac25a7"/>
+      <stop offset="0.846" stop-color="#4e25d7"/>
+      <stop offset="1" stop-color="#0026ff"/>
+    </radialGradient>
+  </defs>
+  <circle id="楕円形_88" data-name="楕円形 88" cx="16.675" cy="16.675" r="16.675" transform="translate(0 32.919) rotate(-80.783)" fill="url(#radial-gradient)"/>
+  <g id="グループ_482" data-name="グループ 482" transform="translate(8.174 8.723)">
+    <g id="グループ_479" data-name="グループ 479" transform="translate(0)">
+      <path id="パス_461" data-name="パス 461" d="M139.332,130.817h-8.4a6.766,6.766,0,0,1-6.758-6.758v-7.4a6.766,6.766,0,0,1,6.758-6.758h8.4a6.766,6.766,0,0,1,6.758,6.758v7.4A6.766,6.766,0,0,1,139.332,130.817Zm-8.4-19.413a5.262,5.262,0,0,0-5.256,5.256v7.4a5.262,5.262,0,0,0,5.256,5.256h8.4a5.262,5.262,0,0,0,5.256-5.256v-7.4a5.262,5.262,0,0,0-5.256-5.256Z" transform="translate(-124.177 -109.902)" fill="#fff"/>
+    </g>
+    <g id="グループ_480" data-name="グループ 480" transform="translate(4.941 4.442)">
+      <path id="パス_462" data-name="パス 462" d="M145.94,136.089a6.016,6.016,0,1,1,6.015-6.016A6.022,6.022,0,0,1,145.94,136.089Zm0-10.529a4.514,4.514,0,1,0,4.514,4.513A4.519,4.519,0,0,0,145.94,125.56Z" transform="translate(-139.924 -124.058)" fill="#fff"/>
+    </g>
+    <g id="グループ_481" data-name="グループ 481" transform="translate(15.632 3.379)">
+      <path id="パス_463" data-name="パス 463" d="M176.494,121.918a1.248,1.248,0,1,1-1.248-1.248A1.248,1.248,0,0,1,176.494,121.918Z" transform="translate(-173.998 -120.67)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

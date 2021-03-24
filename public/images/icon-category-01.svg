@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="73.747" height="80.955" viewBox="0 0 73.747 80.955">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffba00"/>
+      <stop offset="0.571" stop-color="#f78842"/>
+      <stop offset="1" stop-color="#fc4747"/>
+    </linearGradient>
+    <filter id="パス_577" x="0" y="0" width="73.747" height="80.955" filterUnits="userSpaceOnUse">
+      <feOffset dx="2" dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feFlood flood-opacity="0.545"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="グループ_807" data-name="グループ 807" transform="translate(-134.785 -3255.447)">
+    <g transform="matrix(1, 0, 0, 1, 134.79, 3255.45)" filter="url(#パス_577)">
+      <path id="パス_577-2" data-name="パス 577" d="M1234.565-269.414a21.762,21.762,0,0,1,.69-5.821,34.659,34.659,0,0,1,1.97-5.865c1.272-4.165,4.66-8.413,6.521-11.07a13.354,13.354,0,0,0,3.84,8.24c1.568-13.751,7.259-21.075,18.781-23.361-.119,8.833,2.533,12.739,8.14,19.085.4-1.649.869-3.169,1.131-4.724.266-1.576.331-3.186.505-5,1.188.911,2.307,1.713,3.365,2.59,5.5,4.554,9.945,9.934,12.093,16.824,2.978,9.554,2.158,18.7-4.246,26.745a26.426,26.426,0,0,1-15.689,9.416c-8.954,1.866-17.848,1.481-25.521-3.845-6.289-4.365-8.683-8.172-10.3-13.083A24.851,24.851,0,0,1,1234.565-269.414Z" transform="translate(-1229.01 312.79)" fill="url(#linear-gradient)"/>
+    </g>
+    <text id="PK" transform="translate(150 3310.5)" fill="#fff" font-size="26" font-family="Helvetica-Bold, Helvetica" font-weight="700" letter-spacing="0.1em"><tspan x="0" y="0">PK</tspan></text>
+  </g>
+</svg>

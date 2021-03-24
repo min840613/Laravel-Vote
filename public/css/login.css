@@ -1,0 +1,19 @@
+.login-gateway {
+  border: 2px solid var(--light-yellow);
+  border-radius: 10px;
+  min-width: 250px;
+  min-height: 320px;
+  transition: all 0.1s ease-in;
+  background-color: #fff;
+  font-weight: 400;
+}
+.login-gateway:hover {
+  background-color: var(--light-yellow);
+  font-weight: 500;
+}
+@media screen and (max-width: 576px) {
+  .login-gateway {
+    min-width: unset;
+    min-height: unset;
+  }
+}

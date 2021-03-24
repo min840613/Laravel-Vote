@@ -1,0 +1,110 @@
+/* card */
+
+.card-img-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (max-width: 960px) {
+
+  .card-img-bg {
+    min-height: 250px;
+  }
+}
+
+h3.card-title {
+  font-size: 1.3rem;
+}
+
+/* card */
+
+/* 首頁最上方輪播 */
+
+/* 首頁最上方輪播 */
+
+/* pk 輪播 */
+.carousel-pk-img {
+  max-height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+.carousel-pk-img>.icon-background {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  /* 10px 是給的圖片上方有一點透明空間  */
+  top: -10px;
+  z-index: 5;
+}
+.carousel-pk-img>.icon-vs {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  z-index: 5;
+}
+.carousel-pk-title {
+  font-size: 1.8em;
+  font-weight: 500;
+}
+.progress {
+  height: 1.8rem;
+  padding: 0.35rem;
+  border-radius: 7.25rem;
+  box-shadow: 0 3px 4px rgba(0,0,0,0.3)
+}
+.progress-bar {
+  border-radius: 7.25rem;
+}
+.progress-container {
+  perspective: 500px;
+  -webkit-perspective: 500px;
+}
+.progress-container::before {
+  content: attr(data-percent) '%';
+  display: block;
+  position: absolute;
+  right: 1.5rem;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  height: 1.3rem;
+  z-index: 1;
+  /* color: #AC2C2C; */
+  text-shadow: 0.5px 0.5px white, 0.5px -0.5px white, -0.5px -0.5px white, -0.5px 0.5px white;
+}
+
+.progress-container[data-side="right"]::before {
+  left: 1.5rem;
+  right: unset;
+  /* color: #194184; */
+}
+.pk-options {
+  box-shadow: 0 3px 4px rgba(0,0,0,0.3);
+}
+@media screen and (max-width: 576px) {
+  .carousel-pk-img {
+    max-height: unset;
+  }
+  .carousel-pk-img>.icon-background {
+    transform: rotate(-90deg) scaleY(1.6) scaleX(0.5);
+    top: 0;
+    bottom: 0;
+    filter: drop-shadow(-4mm 0mm 2mm rgba(0, 0, 0, 0.3));
+  }
+  .carousel-pk-img>.icon-vs {
+    transform: scale(0.5);
+  }
+  .pk-device-small .carousel-pk-title {
+    font-size: 1.3em;
+  }
+}
+/* pk 輪播 */
