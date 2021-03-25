@@ -54,9 +54,9 @@
       event.preventDefault();
       hide($(this).attr('id').substring(2));
     });
-    $(document).on("click", 'a.vote', function(event) {
+    $(document).on("click", 'a.*********', function(event) {
       event.preventDefault();
-      handleVote($(this));
+      handle*********($(this));
     });
     $(document).on("click", 'a.reply', function(event) {
       event.preventDefault();
@@ -421,11 +421,11 @@
   }
 
   /**
-   * Function to process a vote when a user clicks an arrow.
+   * Function to process a ********* when a user clicks an arrow.
    */
-  function handleVote(link) {
+  function handle*********(link) {
     if (!opts.voting) {
-      showError("You'll need to login to vote.");
+      showError("You'll need to login to *********.");
       return;
     }
 
@@ -434,8 +434,8 @@
       // Didn't click on one of the voting arrows.
       return;
     }
-    // If it is an unvote, the new vote value is 0,
-    // Otherwise it's 1 for an upvote, or -1 for a downvote.
+    // If it is an un*********, the new ********* value is 0,
+    // Otherwise it's 1 for an up*********, or -1 for a down*********.
     var value = 0;
     if (id.charAt(1) != 'u') {
       value = id.charAt(0) == 'u' ? 1 : -1;
@@ -446,7 +446,7 @@
       value: value
     };
 
-    // Swap the vote and unvote links.
+    // Swap the ********* and un********* links.
     link.hide();
     $('#' + id.charAt(0) + (id.charAt(1) == 'u' ? 'v' : 'u') + d.comment_id)
       .show();
@@ -455,29 +455,29 @@
     var div = $('div#cd' + d.comment_id);
     var data = div.data('comment');
 
-    // If this is not an unvote, and the other vote arrow has
+    // If this is not an un*********, and the other ********* arrow has
     // already been pressed, unpress it.
-    if ((d.value !== 0) && (data.vote === d.value * -1)) {
+    if ((d.value !== 0) && (data.********* === d.value * -1)) {
       $('#' + (d.value == 1 ? 'd' : 'u') + 'u' + d.comment_id).hide();
       $('#' + (d.value == 1 ? 'd' : 'u') + 'v' + d.comment_id).show();
     }
 
     // Update the comments rating in the local data.
-    data.rating += (data.vote === 0) ? d.value : (d.value - data.vote);
-    data.vote = d.value;
+    data.rating += (data.********* === 0) ? d.value : (d.value - data.*********);
+    data.********* = d.value;
     div.data('comment', data);
 
     // Change the rating text.
     div.find('.rating:first')
       .text(data.rating + ' point' + (data.rating == 1 ? '' : 's'));
 
-    // Send the vote information to the server.
+    // Send the ********* information to the server.
     $.ajax({
       type: "POST",
-      url: opts.processVoteURL,
+      url: opts.process*********URL,
       data: d,
       error: function(request, textStatus, error) {
-        showError('Oops, there was a problem casting that vote.');
+        showError('Oops, there was a problem casting that *********.');
       }
     });
   }
@@ -566,9 +566,9 @@
     var context = $.extend({}, opts, comment);
     var div = $(renderTemplate(commentTemplate, context));
 
-    // If the user has voted on this comment, highlight the correct arrow.
-    if (comment.vote) {
-      var direction = (comment.vote == 1) ? 'u' : 'd';
+    // If the user has *********d on this comment, highlight the correct arrow.
+    if (comment.*********) {
+      var direction = (comment.********* == 1) ? 'u' : 'd';
       div.find('#' + direction + 'v' + comment.id).hide();
       div.find('#' + direction + 'u' + comment.id).show();
     }
@@ -662,7 +662,7 @@
   };
 
   var opts = {
-    processVoteURL: '/_process_vote',
+    process*********URL: '/_process_*********',
     addCommentURL: '/_add_comment',
     getCommentsURL: '/_get_comments',
     acceptCommentURL: '/_accept_comment',
@@ -723,20 +723,20 @@
 
   var commentTemplate = '\
     <div id="cd<%id%>" class="sphinx-comment<%css_class%>">\
-      <div class="vote">\
+      <div class="*********">\
         <div class="arrow">\
-          <a href="#" id="uv<%id%>" class="vote" title="vote up">\
+          <a href="#" id="uv<%id%>" class="*********" title="********* up">\
             <img src="<%upArrow%>" />\
           </a>\
-          <a href="#" id="uu<%id%>" class="un vote" title="vote up">\
+          <a href="#" id="uu<%id%>" class="un *********" title="********* up">\
             <img src="<%upArrowPressed%>" />\
           </a>\
         </div>\
         <div class="arrow">\
-          <a href="#" id="dv<%id%>" class="vote" title="vote down">\
+          <a href="#" id="dv<%id%>" class="*********" title="********* down">\
             <img src="<%downArrow%>" id="da<%id%>" />\
           </a>\
-          <a href="#" id="du<%id%>" class="un vote" title="vote down">\
+          <a href="#" id="du<%id%>" class="un *********" title="********* down">\
             <img src="<%downArrowPressed%>" />\
           </a>\
         </div>\

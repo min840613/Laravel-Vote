@@ -20,7 +20,7 @@
     </p>
     <div class="d-flex justify-content-center my-5">
       <button id='btn_register' style='display: none;' class="btn btn-theme bg-yellow gray-side text-white"  onclick="javascript: location.href='{{url('/register')}}';">註冊會員</button>
-      <button id='btn_result' class="btn btn-theme bg-orange gray-side text-white"  onclick="javascript: location.href='{{url('/voteResult')}}/{{$id}}';">看即時結果</button>
+      <button id='btn_result' class="btn btn-theme bg-orange gray-side text-white"  onclick="javascript: location.href='{{url('/*********Result')}}/{{$id}}';">看即時結果</button>
     </div>
   </main>
 @endsection

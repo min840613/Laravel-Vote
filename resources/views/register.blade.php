@@ -3,7 +3,7 @@
 @section('meta_desc', $meta_desc)
 
 @section('self_css')
-<link rel="stylesheet" href="https://prod-vote-image.nownews.com/css/register.css">
+<link rel="stylesheet" href="*********/css/register.css">
 @endsection
 
 @section('main')

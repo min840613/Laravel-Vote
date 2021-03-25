@@ -128,7 +128,7 @@ class LU
 
             $pivot = $this->findPivot($column, $luColumn);
             if ($pivot !== $column) {
-                $this->pivotExchange($pivot, $column);
+                $this->pi*********xchange($pivot, $column);
             }
 
             $this->computeMultipliers($column);
@@ -174,7 +174,7 @@ class LU
         return $pivot;
     }
 
-    private function pivotExchange($pivot, $column): void
+    private function pi*********xchange($pivot, $column): void
     {
         for ($kValue = 0; $kValue < $this->columns; ++$kValue) {
             $tValue = $this->luMatrix[$pivot][$kValue];

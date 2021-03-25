@@ -7,11 +7,11 @@
     {{-- <meta http-equiv="X-UA-Compatible" content="ie=edge" /> --}}
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta http-equiv="content-language" content="zh-Hant-TW">
-    <meta property="og:site_name" content="NOWnews民調">
+    <meta property="og:site_name" content="*******">
     <meta property="og:locale" content="zh_TW" />
-    <meta name="author" content="NOWnews今日新聞">
-    <meta name="copyright" content="NOWnews今日新聞">
-    <meta name="application-name" content="NOWnews民調">
+    <meta name="author" content="*******">
+    <meta name="copyright" content="*******">
+    <meta name="application-name" content="*******">
     <meta name="twitter:card" content="summary">
     <meta property="og:type" content="website" />
     <meta property="og:title" content="@yield('meta_title')">
@@ -19,21 +19,21 @@
     <meta property="og:image:height" content="{{ isset($og_image_height) ? $og_image_height : 800 }}" />
     <meta property="og:url" content="{{URL::current()}}"/>
     <meta property="twitter:title" content="@yield('meta_title')">
-    <meta property="article:author" content="https://www.facebook.com/nownews" />
-    <meta property="article:publisher" content="https://www.facebook.com/nownews">
+    <meta property="article:author" content="*******" />
+    <meta property="article:publisher" content="*******">
     <meta name="title" content="@yield('meta_title')">
     <meta name="description" content="@yield('meta_desc')">
     <meta property="og:description" content="@yield('meta_desc')">
-    <meta property="og:image" content="{{ isset($og_image) ? $og_image : 'https://www.nownews.com/images/banner.jpg' }}">
-    <meta name="keywords" content="{{ isset($og_keywords) && !empty($og_keywords) ? $og_keywords : 'NOWnews民調,NOWnews,今日新聞,網路投票,線上投票' }}">
+    <meta property="og:image" content="{{ isset($og_image) ? $og_image : '*********/images/banner.jpg' }}">
+    <meta name="keywords" content="{{ isset($og_keywords) && !empty($og_keywords) ? $og_keywords : '*******' }}">
 
-    <meta name="google-site-verification" content="rkpebnQ2OCPG7ABYK0x2EXR2MQRwjhmCMGNxZCELS1w" />
+    <meta name="google-site-verification" content="*******" />
     <meta property="fb:app_id" content='{{env('FB_CLIENT_ID')}}'>
     <link rel="canonical" href="{{URL::current()}}">
 
     @yield('self_mata'){{-- 可在各頁面撰寫meta --}}
 
-    <link rel="shortcut icon" href="https://prod-vote-image.nownews.com/images/logo-brand-sm.png" />
+    <link rel="shortcut icon" href="*******" />
     <title>@yield('meta_title')</title>
     @include('layout.css') {{-- 引入css --}}
     @include('layout.js') {{-- 引入js --}}
@@ -69,13 +69,13 @@
         //     cmd: []
         // };
         googletag.cmd.push(function() {
-            googletag.defineSlot('/5799246/vote_nownews_970x90_T', [
+            googletag.defineSlot('/*******', [
                 [970, 90],
                 [728, 90],
                 [320, 100],
                 [320, 50]
             ], 'div-gpt-ad-1608191438549-0').addService(googletag.pubads());
-            googletag.defineSlot('/5799246/vote_nownews_970x250_setend', [
+            googletag.defineSlot('*******', [
                 [320, 50],
                 [970, 90],
                 [728, 90],
@@ -112,7 +112,7 @@
 
     @include('layout.footer') {{-- 引入footer --}}
 
-    <!-- /5799246/vote_nownews_970x250_setend -->
+    <!-- /5799246/*********_*********_970x250_setend -->
     <div class="bottom-widget">
         <div class="backToTopContainer">
             <button type="button" class="backToTop" id='btn_top_going' style="position: relative; z-index: 50; float: none; margin: 0 2rem 6px 0;">
@@ -122,7 +122,7 @@
                 </div>
             </button>
         </div>
-        <!-- /5799246/vote_nownews_970x250_setend -->
+        <!-- /5799246/*********_*********_970x250_setend -->
         <div id='div-gpt-ad-1608191522739-0' class="ad ad-bottom">
             <script>
                 googletag.cmd.push(function() {
@@ -150,7 +150,7 @@
                             警告： 未滿十八歲不得觀賞瀏覽
                         </p>
                         <div class="col-12 col-md-4 align-self-center text-center warning-img">
-                            <img src="https://prod-vote-image.nownews.com/images/rate-warning.png" alt="" width="100%">
+                            <img src="*********/images/rate-warning.png" alt="" width="100%">
                         </div>
                         <div class="col-12 col-md-8 align-self-center">
                             <div>

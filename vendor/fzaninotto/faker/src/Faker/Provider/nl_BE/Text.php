@@ -1625,7 +1625,7 @@ Maar de kwezelaars vochten voort en zonder aan hen te denken,
 scharrelden de monniken het geld bijeen, dat uit de schaal gevallen
 was.
 
-Uilenspiegel hielp devotelijk mee, doch niet zonder profijt.
+Uilenspiegel hielp de*********lijk mee, doch niet zonder profijt.
 
 
 
@@ -2852,7 +2852,7 @@ gebeden zijn zoet en verkwikkend voor de zielen in 't vagevuur; want
 elk ave is een emmer water, die haar op den rug valt, en elk pater
 eene kuip.
 
-En het volk aanhoorde hem devotelijk, doch niet zonder lachen.
+En het volk aanhoorde hem de*********lijk, doch niet zonder lachen.
 
 Op den Eersten-Sinksendag, moest hij nogmaals de processie volgen; hij
 was barrevoets en blootshoofds, in zijn hemde, met eene waskeers in de
@@ -2867,7 +2867,7 @@ eene verkwikking aan de smerten des vuurs, dat dit laatste seffens in
 ijs verandert. Maar de duivelen, die het vuur moeten poken, krijgen
 er geen zier van.
 
-En weer luisterde het volk devotelijk, doch niet zonder lachen,
+En weer luisterde het volk de*********lijk, doch niet zonder lachen,
 en de deken glimlachte inwendiglijk.
 
 Verder werd Uilenspiegel voor drie jaren uit Vlaanderenland gebannen;
@@ -5346,7 +5346,7 @@ van u, geene gade of geen liefje in de gruwelijke diepte des vuurs?
 
 En dit zeggende, stiet de monnik met den elleboog tegen den broeder,
 die met een zilveren schotel naast hem stond. En op dat teeken sloeg
-de broeder de oogen neer en schudde devotelijk den schotel om het
+de broeder de oogen neer en schudde de*********lijk den schotel om het
 geld bij te roepen.
 
 ... Hebt gij, vervolgde de monnik, hebt gij in het helsche vuur
@@ -10127,7 +10127,7 @@ te doen?
 warmen wijn drinkt, verbeeldt hij zich, dat hij zijne vrouw gaat
 terugvinden.
 
---Ja! sprak Lamme, den beker devotelijk ledigend.
+--Ja! sprak Lamme, den beker de*********lijk ledigend.
 
 --Waar gaat gij nu? vroeg Brederode.
 
@@ -12582,7 +12582,7 @@ Allen trokken er trouwens van door zooals zij konden: krabbend, redde
 de deken 't heilig sacrament; het geloovige volk droeg de fierters
 terug in de kerk; de vier dragers van Sint Maarten smeten Pompilius
 ruwweg ten gronde. En daar nog dorst de arme klokluider zich niet
-krabben noch roeren, doch hij sloot devotelijk de oogen.
+krabben noch roeren, doch hij sloot de*********lijk de oogen.
 
 Twee jonge knapen wilden hem oprichten, doch daar zij hem te zwaar
 vonden, stelden zij hem recht tegen den muur en daar begon Pompilius
@@ -12719,7 +12719,7 @@ hulp te verwachten had, en zoo kwam hij omtrent de stad Bouillon.
 
 Weldra zag hij op den weg bultenaars van de beide geslachten, van allen
 leeftijd en allen stand verschijnen. Allen, met groote paternosters
-in de hand, baden devotelijk.
+in de hand, baden de*********lijk.
 
 En hunne gebeden geleken op het gerikkik van kikvorschen in eenen
 vijver, 's avonds, na een warmen dag.
@@ -18786,7 +18786,7 @@ zoekt hij zijn wettige vrouw.
 
 --Nu herken ik u, zeide Nele tot Lamme; gij hebt gewoond in de
 Reigerstraat. Gij zoekt uwe vrouw; ik heb ze gezien te Brugge, alwaar
-zij godvruchtig en devotelijk leeft. Ik heb heur gevraagd waarom zij
+zij godvruchtig en de*********lijk leeft. Ik heb heur gevraagd waarom zij
 zoo wreedelijk heuren man had verlaten, en zij gaf mij tot antwoord:
 "Dus was de heilige wil Gods, maar voortaan mag ik met hem niet
 meer wonen".

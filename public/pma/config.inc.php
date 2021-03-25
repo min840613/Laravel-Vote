@@ -40,8 +40,8 @@ $cfg['TempDir'] = '/tmp/pma';
 /* User used to manipulate with storage */
 //$cfg['Servers'][$i]['controlhost'] = '192.168.51.16';
 //$cfg['Servers'][$i]['controlport'] = '3306';
-//$cfg['Servers'][$i]['controluser'] = 'uat-vote2021-db';
-//$cfg['Servers'][$i]['controlpass'] = 'uat-vote2021-db';
+//$cfg['Servers'][$i]['controluser'] = 'uat-*********2021-db';
+//$cfg['Servers'][$i]['controlpass'] = 'uat-*********2021-db';
 
 /* Storage database and tables */
 // $cfg['Servers'][$i]['pmadb'] = 'phpmyadmin';

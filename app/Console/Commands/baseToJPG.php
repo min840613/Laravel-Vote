@@ -44,16 +44,16 @@ class baseToJPG extends Command
         if($result->first()){
             foreach($result as $val){
                 if(!empty($val->img)){
-                    $url = 'https://vote-backend.nownews.com/images/question/'.$val->question_seq.'/img';
+                    $url = '*********/images/question/'.$val->question_seq.'/img';
                     $imageDataEncoded = base64_encode(file_get_contents($url));
                     $imageData = base64_decode($imageDataEncoded);
                     $source = imagecreatefromstring($imageData);
                     // $angle = 90;
                     // $rotate = imagerotate($source, $angle, 0); // if want to rotate the image
-                    $imageName = "/var/www/vote2021/vote2021/public/baseToJPG/".$val->question_seq.".jpg";
+                    $imageName = "/var/www/*********2021/*********2021/public/baseToJPG/".$val->question_seq.".jpg";
                     $imageSave = imagejpeg($source,$imageName,100);
                     imagedestroy($source);
-                    $process = new Process(['sudo', 'cp', '/var/www/vote2021/vote2021/public/baseToJPG/'.$val->question_seq.'.jpg', '/mnt/baseToJPG']);
+                    $process = new Process(['sudo', 'cp', '/var/www/*********2021/*********2021/public/baseToJPG/'.$val->question_seq.'.jpg', '/mnt/baseToJPG']);
                     $process->run();
                     
                     $aaa += 1;
@@ -66,16 +66,16 @@ class baseToJPG extends Command
             foreach($result as $val){
                 if(!empty($val->img)){
                     
-                    $url = 'https://vote-backend.nownews.com/images/topic01/'.$val->topic01_seq.'/img';
+                    $url = '*********/images/topic01/'.$val->topic01_seq.'/img';
                     $imageDataEncoded = base64_encode(file_get_contents($url));
                     $imageData = base64_decode($imageDataEncoded);
                     $source = imagecreatefromstring($imageData);
                     // $angle = 90;
                     // $rotate = imagerotate($source, $angle, 0); // if want to rotate the image
-                    $imageName = "/var/www/vote2021/vote2021/public/baseToJPG/".$val->topic01_seq.".jpg";
+                    $imageName = "/var/www/*********2021/*********2021/public/baseToJPG/".$val->topic01_seq.".jpg";
                     $imageSave = imagejpeg($source,$imageName,100);
                     imagedestroy($source);
-                    $process = new Process(['sudo', 'cp', '/var/www/vote2021/vote2021/public/baseToJPG/'.$val->topic01_seq.'.jpg', '/mnt/baseToJPG']);
+                    $process = new Process(['sudo', 'cp', '/var/www/*********2021/*********2021/public/baseToJPG/'.$val->topic01_seq.'.jpg', '/mnt/baseToJPG']);
                     $process->run();
 
                     $aaa += 1;
@@ -88,16 +88,16 @@ class baseToJPG extends Command
             foreach($result as $val){
                 if(!empty($val->img)){
 
-                    $url = 'https://vote-backend.nownews.com/images/topic02/'.$val->topic02_seq.'/img';
+                    $url = '*********/images/topic02/'.$val->topic02_seq.'/img';
                     $imageDataEncoded = base64_encode(file_get_contents($url));
                     $imageData = base64_decode($imageDataEncoded);
                     $source = imagecreatefromstring($imageData);
                     // $angle = 90;
                     // $rotate = imagerotate($source, $angle, 0); // if want to rotate the image
-                    $imageName = "/var/www/vote2021/vote2021/public/baseToJPG/".$val->topic02_seq.".jpg";
+                    $imageName = "/var/www/*********2021/*********2021/public/baseToJPG/".$val->topic02_seq.".jpg";
                     $imageSave = imagejpeg($source,$imageName,100);
                     imagedestroy($source);
-                    $process = new Process(['sudo', 'cp', '/var/www/vote2021/vote2021/public/baseToJPG/'.$val->topic02_seq.'.jpg', '/mnt/baseToJPG']);
+                    $process = new Process(['sudo', 'cp', '/var/www/*********2021/*********2021/public/baseToJPG/'.$val->topic02_seq.'.jpg', '/mnt/baseToJPG']);
                     $process->run();
 
                     $aaa += 1;

@@ -39,7 +39,7 @@ class indexModel extends Model
     }
     
     // 取得正在進行中的投票
-    public function get_being_vote($web_type = '', $limit = 0, $type_id = '', $keyword = '', $has_pk = ''){
+    public function get_being_*********($web_type = '', $limit = 0, $type_id = '', $keyword = '', $has_pk = ''){
 
         if($web_type == 'carousel'){ //輪播
             $result = DB::table('question')->where('status', '=', 1);
@@ -89,7 +89,7 @@ class indexModel extends Model
         if($result->first()){
             foreach ($result as $value){
                 if($value->img){
-                    $value->img = 'https://prod-vote-image.nownews.com/baseToJPG/'.$value->question_seq.'.jpg';
+                    $value->img = '*********/baseToJPG/'.$value->question_seq.'.jpg';
                 }
             }
         }
@@ -98,7 +98,7 @@ class indexModel extends Model
 
     }
 
-    public function get_pk_vote($type_id = '', $keyword = ''){
+    public function get_pk_*********($type_id = '', $keyword = ''){
         $result = DB::table('question as q')->select(DB::raw('q.question_seq as q_question_seq, q.img as q_img, q.title as q_title, q.question_date_s as q_start, q.question_date_e as q_end, q.desc_ as q_desc, 
                                                             q.gift as q_gift, q.roster as q_roster, q.verific_login as q_login, q.weights as q_weights, 
                                                             t1.title as t1_title, t1.type as t1_type, t1.topic01_seq as t1_topic01_seq, 
@@ -144,10 +144,10 @@ class indexModel extends Model
             foreach($result as $key => $value){
 
                 if($value->q_img){
-                    $value->q_img = 'https://prod-vote-image.nownews.com/baseToJPG/'.$value->q_question_seq.'.jpg';
+                    $value->q_img = '*********/baseToJPG/'.$value->q_question_seq.'.jpg';
                 }
                 if($value->t2_img){
-                    $value->t2_img = 'https://prod-vote-image.nownews.com/baseToJPG/'.$value->t2_topic02_seq.'.jpg';
+                    $value->t2_img = '*********/baseToJPG/'.$value->t2_topic02_seq.'.jpg';
                 }
 
                 if($title != $value->q_question_seq){
@@ -181,7 +181,7 @@ class indexModel extends Model
     }
 
     // 取得已結束的投票
-    public function get_over_vote($web_type = '', $limit = 0, $type_id = '', $keyword = ''){
+    public function get_over_*********($web_type = '', $limit = 0, $type_id = '', $keyword = ''){
         if($web_type == 'list'){
 
             $result = DB::table('question as q')->select(DB::raw('q.*, qt.name as type_name, IFNULL(min(tc.topic01_count), 0) as count'))
@@ -236,7 +236,7 @@ class indexModel extends Model
         if($result->first()){
             foreach ($result as $value){
                 if($value->img){
-                    $value->img = 'https://prod-vote-image.nownews.com/baseToJPG/'.$value->question_seq.'.jpg';
+                    $value->img = '*********/baseToJPG/'.$value->question_seq.'.jpg';
                 }
             }
         }
@@ -246,7 +246,7 @@ class indexModel extends Model
     }
 
     // 取得正在進行中的投票
-    public function get_interest_vote($limit = 1){
+    public function get_interest_*********($limit = 1){
 
         $result = DB::table('question as q')
                                             ->select('q.*', 'qt.name as type_name')
@@ -261,7 +261,7 @@ class indexModel extends Model
         if($result->first()){
             foreach ($result as $value){
                 if($value->img){
-                    $value->img = 'https://prod-vote-image.nownews.com/baseToJPG/'.$value->question_seq.'.jpg';
+                    $value->img = '*********/baseToJPG/'.$value->question_seq.'.jpg';
                 }
             }
         }
@@ -269,7 +269,7 @@ class indexModel extends Model
         return $result;
 
     }
-    public function get_voteResult($id, $has_status = ''){
+    public function get_*********Result($id, $has_status = ''){
 
         $result = DB::table('question as q')->where('q.question_seq', '=', $id)
                                             ->select(DB::raw('q.question_seq as q_question_seq, q.img as q_img, q.title as q_title, q.question_date_s as q_start, q.question_date_e as q_end, q.desc_ as q_desc, q.question_type as q_question_type, q.modify_date as q_modify_date, 
@@ -306,10 +306,10 @@ class indexModel extends Model
             foreach($result as $key => $value){
 
                 if($value->q_img){
-                    $value->q_img = 'https://prod-vote-image.nownews.com/baseToJPG/'.$value->q_question_seq.'.jpg';
+                    $value->q_img = '*********/baseToJPG/'.$value->q_question_seq.'.jpg';
                 }
                 if($value->t2_img){
-                    $value->t2_img = 'https://prod-vote-image.nownews.com/baseToJPG/'.$value->t2_topic02_seq.'.jpg';
+                    $value->t2_img = '*********/baseToJPG/'.$value->t2_topic02_seq.'.jpg';
                 }
 
                 if(!empty($value->t2_weights)){
@@ -359,7 +359,7 @@ class indexModel extends Model
         return $result;
     }
 
-    public function get_vote($id, $has_status = ''){
+    public function get_*********($id, $has_status = ''){
 
         $result = DB::table('question as q')
                                             ->select(DB::raw('q.question_seq as q_question_seq, q.img as q_img, q.title as q_title, q.question_date_s as q_start, q.question_date_e as q_end, q.desc_ as q_desc, q.question_type as q_question_type, q.modify_date as q_modify_date, 
@@ -395,10 +395,10 @@ class indexModel extends Model
             foreach($result as $key => $value){
 
                 if($value->q_img){
-                    $value->q_img = 'https://prod-vote-image.nownews.com/baseToJPG/'.$value->q_question_seq.'.jpg';
+                    $value->q_img = '*********/baseToJPG/'.$value->q_question_seq.'.jpg';
                 }
                 if($value->t2_img){
-                    $value->t2_img = 'https://prod-vote-image.nownews.com/baseToJPG/'.$value->t2_topic02_seq.'.jpg';
+                    $value->t2_img = '*********/baseToJPG/'.$value->t2_topic02_seq.'.jpg';
                 }
 
                 if($title != $value->t1_title){
@@ -425,7 +425,7 @@ class indexModel extends Model
         return $rel_result;
     }
 
-    public function get_vote_command($topic01, $topic02, $page = 1){
+    public function get_*********_command($topic01, $topic02, $page = 1){
         $result = DB::table('answer')
                                     ->where('topic01_seq', '=', $topic01)
                                     ->where('topic02_seq', '=', $topic02)

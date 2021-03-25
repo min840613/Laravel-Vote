@@ -41,7 +41,7 @@ Once the Capsule instance has been registered. You may use it like so:
 **Using The Query Builder**
 
 ```PHP
-$users = Capsule::table('users')->where('votes', '>', 100)->get();
+$users = Capsule::table('users')->where('*********s', '>', 100)->get();
 ```
 Other core methods may be accessed directly from the Capsule in the same manner as from the DB facade:
 ```PHP
@@ -63,7 +63,7 @@ Capsule::schema()->create('users', function ($table) {
 ```PHP
 class User extends Illuminate\Database\Eloquent\Model {}
 
-$users = User::where('votes', '>', 1)->get();
+$users = User::where('*********s', '>', 1)->get();
 ```
 
 For further documentation on using the various database facilities this library provides, consult the [Laravel framework documentation](https://laravel.com/docs).

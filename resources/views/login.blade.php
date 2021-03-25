@@ -3,7 +3,7 @@
 @section('meta_desc', $meta_desc)
 
 @section('self_css')
-<link rel="stylesheet" href="https://prod-vote-image.nownews.com/css/login.css">
+<link rel="stylesheet" href="*********/css/login.css">
 @endsection
 
 @section('main')
@@ -16,11 +16,11 @@
   </h2>
   <div class="d-flex flex-column flex-sm-row justify-content-center my-5">
     <button class="d-flex flex-column align-items-center justify-content-around my-3 mx-4 py-5 px-3 login-gateway" onclick="jvascript: document.location.href='{{url('/user/auth/facebook-sign-in')}}'">
-      <img src="https://prod-vote-image.nownews.com/images/login-01.svg" alt="" width="80">
+      <img src="*********/images/login-01.svg" alt="" width="80">
       <span class="text-center text-muted my-2">以Facebook帳號<br />登入</span>
     </button>
     <button class="d-flex flex-column align-items-center justify-content-around my-3 mx-4 py-5 px-3 login-gateway" onclick="jvascript: document.location.href='{{url('/user/auth/google-sign-in')}}'">
-      <img src="https://prod-vote-image.nownews.com/images/login-02.svg" alt="" width="80">
+      <img src="*********/images/login-02.svg" alt="" width="80">
       <span class="text-center text-muted my-2">以Google帳號<br />登入</span>
     </button>
   </div>

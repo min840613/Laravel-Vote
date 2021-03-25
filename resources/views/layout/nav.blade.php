@@ -78,15 +78,15 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand my-0 d-none d-sm-flex align-items-center p-0 navbar-brand-lg" href="{{url('/')}}">
-      <img src="https://prod-vote-image.nownews.com/images/logo-brand-white.svg" width="110" height="110" class="d-none d-sm-inline-block align-top" alt="" loading="lazy" />
+      <img src="*********/images/logo-brand-white.svg" width="110" height="110" class="d-none d-sm-inline-block align-top" alt="" loading="lazy" />
       <h2 class="ml-1">
-        NOWnews 民調
+        ********* 民調
       </h2>
     </a>
     <a class="navbar-brand my-0 d-flex d-sm-none align-items-center p-0 navbar-brand-sm" href="{{url('/')}}">
-      <img src="https://prod-vote-image.nownews.com/images/logo-brand-white.svg" width="50" height="50" class="d-inline-block align-top" alt="" loading="lazy" />
+      <img src="*********/images/logo-brand-white.svg" width="50" height="50" class="d-inline-block align-top" alt="" loading="lazy" />
       <h2 class="ml-0 ml-xs-1 my-0">
-        NOWnews 民調
+        ********* 民調
       </h2>
     </a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -108,7 +108,7 @@
               登入會員
             </a>
           @endif --}}
-          <form id="desktop_search" class="form-inline ml-4" method='get' action="{{url('/voteType')}}/search">
+          <form id="desktop_search" class="form-inline ml-4" method='get' action="{{url('/*********Type')}}/search">
             <button class="btn btn-sm btn-warning text-white rounded-circle search-btn" type="submit">
               <i class="fa fa-search" aria-hidden="true"></i>
             </button>
@@ -121,13 +121,13 @@
               全部話題
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="{{url('/voteType/being_vote')}}">進行中投票</a>
-              <a class="dropdown-item" href="{{url('/voteType/over_vote')}}">已結束投票</a>
+              <a class="dropdown-item" href="{{url('/*********Type/being_*********')}}">進行中投票</a>
+              <a class="dropdown-item" href="{{url('/*********Type/over_*********')}}">已結束投票</a>
             </div>
           </li>
           @foreach ($nav as $key => $value)
             <li class="nav-item">
-            <a class="nav-link" href="{{url('/voteType')}}/{{$value->seq}}">{{$value->name}}</a>
+            <a class="nav-link" href="{{url('/*********Type')}}/{{$value->seq}}">{{$value->name}}</a>
           </li>
           @endforeach
           {{-- <li class="nav-item">
@@ -159,7 +159,7 @@
             <a class="nav-link" href="{{url('/login')}}">登入會員</a>
           </li> --}}
           <li class="nav-item d-block d-sm-none" id='mobile_search'>
-            <form class="form-inline row justify-content-center" method='get' action="{{url('/voteType')}}/search">
+            <form class="form-inline row justify-content-center" method='get' action="{{url('/*********Type')}}/search">
               <input class="form-control form-control-sm col-7" name='keyword' type="search" placeholder="Search" aria-label="Search" />
               <button class="btn btn-sm btn-warning col-3 navLink" type="submit">
                 搜尋
@@ -177,13 +177,13 @@
     </div>
     <div class="swiper-container  ml-4">
       <div class="swiper-wrapper">
-        @foreach ($being_vote as $key => $value)
+        @foreach ($being_********* as $key => $value)
           @if($key == 0)
             <div class="swiper-slide d-flex flex-row">
           @else
             <div class="swiper-slide">
           @endif
-          <div class="flex-grow-1" style="cursor: pointer;" onclick="javascript: location.href = '{{url('/vote')}}/{{$value->question_seq}}'">
+          <div class="flex-grow-1" style="cursor: pointer;" onclick="javascript: location.href = '{{url('/*********')}}/{{$value->question_seq}}'">
           {{str_replace('18禁', '', str_replace('PK', '', $value->title))}}
           </div>
         </div>
@@ -229,13 +229,13 @@
     </div>
     <div class="swiper-container  ml-4">
       <div class="swiper-wrapper">
-        @foreach ($being_vote as $key => $value)
+        @foreach ($being_********* as $key => $value)
           @if($key == 0)
             <div class="swiper-slide d-flex flex-row">
           @else
             <div class="swiper-slide">
           @endif
-          <div class="flex-grow-1" style="cursor: pointer;" onclick="javascript: location.href = '{{url('/vote')}}/{{$value->question_seq}}'">
+          <div class="flex-grow-1" style="cursor: pointer;" onclick="javascript: location.href = '{{url('/*********')}}/{{$value->question_seq}}'">
           {{str_replace('18禁', '', str_replace('PK', '', $value->title))}}
           </div>
         </div>

@@ -3,7 +3,7 @@
 @section('meta_desc', $meta_desc)
 
 @section('self_css')
-<link rel="stylesheet" href="https://prod-vote-image.nownews.com/css/index.css">
+<link rel="stylesheet" href="*********/css/index.css">
   <style>
     div.position-relative div.slider div.position-relative div.carousel-mask button:hover{
       background-color: #FFC107;
@@ -23,9 +23,9 @@
       {
         "@context": "http://www.schema.org",
         "@type": "Organization",
-        "name": "NOWnews今日新聞",
-        "url": "https://www.nownews.com",
-        "logo": "https://www.nownews.com/icon/icon-512x512.png",
+        "name": "*********今日新聞",
+        "url": "*********",
+        "logo": "*********/icon/icon-512x512.png",
         "description": "體察生活大小事，全民意見報你知！各式議題的民意調查，客觀呈現不同聲音與想法，蒐羅所有時下趨勢的意見報告，盡在NOW民調。",
         "address": {
           "@type": "PostalAddress",
@@ -44,24 +44,24 @@
       {
         "@context": "http://schema.org",
         "@type": "WebSite",
-        "name": "NOWnews民調",
-        "url": "https://vote.nownews.com",
-        "alternateName": "NOWnews民調"
+        "name": "*********民調",
+        "url": "https://*********.*********.com",
+        "alternateName": "*********民調"
       }
     ]
   </script>
 @endsection
 @section('main')
 <main class="container">
-    @if ($being_vote->first())
+    @if ($being_*********->first())
       <div class="position-relative">
         <div class="slider index-slider">
-          @foreach ($being_vote as $key => $value)
+          @foreach ($being_********* as $key => $value)
             <div class="slide-{{$key}} position-relative">
               <div class="carousel-mask">
                 <h2>{{str_replace('18禁', '', str_replace('PK', '', $value->title))}}</h2>
                 <span>火熱投票中</span>
-                <button class="btn btn-outline text-white" style="font-weight: bold;" onclick="jvascript: document.location.href='{{url('/vote')}}/{{$value->question_seq}}'">查看完整內容</button>
+                <button class="btn btn-outline text-white" style="font-weight: bold;" onclick="jvascript: document.location.href='{{url('/*********')}}/{{$value->question_seq}}'">查看完整內容</button>
               </div>
               <img src="{{$value->img}}" width="100%" alt="">
             </div>
@@ -73,7 +73,7 @@
               <span>火熱投票中</span>
               <button class="btn btn-outline text-white">查看完整內容</button>
             </div>
-            <img src="https://prod-vote-image.nownews.com/question_img/4028818a7554ab980175ad35ba732c9a/img" width="100%" alt="">
+            <img src="*********/question_img/4028818a7554ab980175ad35ba732c9a/img" width="100%" alt="">
           </div>
           <div class="slide-2 position-relative">
             <div class="carousel-mask">
@@ -81,7 +81,7 @@
               <span>火熱投票中</span>
               <button class="btn btn-outline text-white" href="">查看完整內容</button>
             </div>
-            <img src="https://prod-vote-image.nownews.com/question_img/4028818a7554ab980175ad305a222bd8/img" width="100%" alt="">
+            <img src="*********/question_img/4028818a7554ab980175ad305a222bd8/img" width="100%" alt="">
           </div>
           <div class="slide-3 position-relative">
             <div class="carousel-mask">
@@ -89,7 +89,7 @@
               <span>火熱投票中</span>
               <button class="btn btn-outline text-white" href="">查看完整內容</button>
             </div>
-            <img src="https://prod-vote-image.nownews.com/question_img/4028818a7554ab980175ad305a222bd8/img" width="100%" alt="">
+            <img src="*********/question_img/4028818a7554ab980175ad305a222bd8/img" width="100%" alt="">
           </div> --}}
         </div>
         <div class="carousel-arrows prev"></div>
@@ -97,11 +97,11 @@
       </div>  
     @endif
   
-@if($pk_vote)
+@if($pk_*********)
   <section class="section">
     <div class="section-header d-flex flex-row justify-content-between">
       <div class="d-flex flex-row align-items-center">
-        <img class="section-icon mx-2" data-icon="pk" src="https://prod-vote-image.nownews.com/images/section-icon-01.svg" alt="">
+        <img class="section-icon mx-2" data-icon="pk" src="*********/images/section-icon-01.svg" alt="">
         <h2 class="section-title">PK擂台</h2>
       </div>
       <button class="section-more d-none">
@@ -111,15 +111,15 @@
     </div>
     <div class="section-content position-relative">
       <div class="slider pk-slider">
-        @foreach($pk_vote as $key => $value)
-          <div style="cursor: pointer;" class="slide-{{$key}} position-relative" onclick="javascript: location.href = '{{url('/')}}/vote/{{$value['q_question_seq']}}'">
+        @foreach($pk_********* as $key => $value)
+          <div style="cursor: pointer;" class="slide-{{$key}} position-relative" onclick="javascript: location.href = '{{url('/')}}/*********/{{$value['q_question_seq']}}'">
             <div class="btn btn-theme bg-classic mx-auto mb-3">
               {{str_replace('18禁', '', str_replace('PK', '', $value['q_title']))}}
             </div>
             <div class="d-none d-sm-block">
             <div class="carousel-pk-img row">
-              <img src="https://prod-vote-image.nownews.com/images/vsb.svg" alt="" class="icon-background">
-              <img src="https://prod-vote-image.nownews.com/images/vs.svg" alt="" class="icon-vs">
+              <img src="*********/images/vsb.svg" alt="" class="icon-background">
+              <img src="*********/images/vs.svg" alt="" class="icon-vs">
               <!-- 選項一圖片 -->
               <img class="col-6" src="{{$value['all'][0]->t2_img}}" width="100%" alt="">
               <!-- 選項二圖片 -->
@@ -227,8 +227,8 @@
               </div>
             </div>
             <div class="carousel-pk-img d-flex flex-column">
-              <img src="https://prod-vote-image.nownews.com/images/vsb.svg" alt="" class="icon-background">
-              <img src="https://prod-vote-image.nownews.com/images/vs.svg" alt="" class="icon-vs">
+              <img src="*********/images/vsb.svg" alt="" class="icon-background">
+              <img src="*********/images/vs.svg" alt="" class="icon-vs">
               <!-- 選項一圖片 -->
               <img class="flex-grow-1" src="{{$value['all'][0]->t2_img}}" width="100%" alt="">
               <!-- 選項二圖片 -->
@@ -272,27 +272,27 @@
     </div>
   </section>
 @endif
-<!-- /5799246/vote_nownews_970x90_T -->
+<!-- /5799246/*********_*********_970x90_T -->
 <div id='div-gpt-ad-1608191438549-0' class="ad ad-top">
   <script>
     googletag.cmd.push(function() { googletag.display('div-gpt-ad-1608191438549-0'); });
   </script>
 </div>
-  @if($limit_being_vote->first())
+  @if($limit_being_*********->first())
     <section class="section">
       <div class="section-header d-flex flex-row justify-content-between">
         <div class="d-flex flex-row align-items-center">
-          <img class="section-icon mx-2" src="https://prod-vote-image.nownews.com/images/section-icon-02.svg" alt="">
+          <img class="section-icon mx-2" src="*********/images/section-icon-02.svg" alt="">
           <h2 class="section-title">火熱投票中</h2>
         </div>
-        <button class="section-more" onclick="javascript: document.location.href='{{url('/voteType/being_vote')}}';">
+        <button class="section-more" onclick="javascript: document.location.href='{{url('/*********Type/being_*********')}}';">
           READ MORE
           <i class="fas fa-chevron-circle-right text-yellow"></i>
         </button>
       </div>
       <div class="section-content">
         <!-- component start -->
-        @foreach ($limit_being_vote as $key => $value)
+        @foreach ($limit_being_********* as $key => $value)
           <div class="card mb-5">
             {{-- @if(strpos($value->title, 'PK') !== false)
               <div class="icon-category">
@@ -300,7 +300,7 @@
               </div>
             @endif --}}
             <div class="row no-gutters">
-            <div class="col-12 col-lg-5 bg-white card-img-bg" style="background-image: url('{{$value->img}}'); cursor:pointer;" onclick="javascript: location.href ='{{url('/')}}/vote/{{$value->question_seq}}'">
+            <div class="col-12 col-lg-5 bg-white card-img-bg" style="background-image: url('{{$value->img}}'); cursor:pointer;" onclick="javascript: location.href ='{{url('/')}}/*********/{{$value->question_seq}}'">
               </div>
               <div class="col-12 col-lg-7 bg-wheat">
                 <div class="card-body">
@@ -314,14 +314,14 @@
                         <img src="{{ asset('images/card-sns-01.svg') }}" alt="">
                       </a> --}}
                         <div>
-                          <a href="https://www.facebook.com/sharer/sharer.php?u={{url('/vote')}}/{{$value->question_seq}}" target="_blank">
-                            <img src="https://prod-vote-image.nownews.com/images/card-sns-02.svg" alt="">
+                          <a href="https://www.facebook.com/sharer/sharer.php?u={{url('/*********')}}/{{$value->question_seq}}" target="_blank">
+                            <img src="*********/images/card-sns-02.svg" alt="">
                           </a>
-                          {{-- <a href="http://line.naver.jp/R/msg/text/?{{str_replace('18禁', '', str_replace('PK', '', $value->title))}} {{url('/vote')}}/{{$value->question_seq}}" target="_blank">
-                            <img src="https://prod-vote-image.nownews.com/images/card-sns-03.svg" alt="">
+                          {{-- <a href="http://line.naver.jp/R/msg/text/?{{str_replace('18禁', '', str_replace('PK', '', $value->title))}} {{url('/*********')}}/{{$value->question_seq}}" target="_blank">
+                            <img src="*********/images/card-sns-03.svg" alt="">
                           </a> --}}
-                          <a href="https://social-plugins.line.me/lineit/share?url={{url('/vote')}}/{{$value->question_seq}}" target="_blank">
-                            <img src="https://prod-vote-image.nownews.com/images/card-sns-03.svg" alt="">
+                          <a href="https://social-plugins.line.me/lineit/share?url={{url('/*********')}}/{{$value->question_seq}}" target="_blank">
+                            <img src="*********/images/card-sns-03.svg" alt="">
                           </a>
                         </div>
                     {{-- </div> --}}
@@ -331,8 +331,8 @@
                     <small class="text-muted">調查期間：{{date('Y/m/d', strtotime($value->question_date_s))}}~{{date('Y/m/d', strtotime($value->question_date_e))}}</small>
                     {{-- <small class="text-muted">{{$value->count + $value->weights}}人參加投票</small> --}}
                   </p>
-                  <h3 style="cursor:pointer;" class="card-title" onclick="javascript: location.href ='{{url('/')}}/vote/{{$value->question_seq}}'">{{str_replace('18禁', '', str_replace('PK', '', $value->title))}}</h3>
-                  <p style="cursor:pointer;" class="card-text" onclick="javascript: location.href ='{{url('/')}}/vote/{{$value->question_seq}}'">{{$value->desc_}}</p>
+                  <h3 style="cursor:pointer;" class="card-title" onclick="javascript: location.href ='{{url('/')}}/*********/{{$value->question_seq}}'">{{str_replace('18禁', '', str_replace('PK', '', $value->title))}}</h3>
+                  <p style="cursor:pointer;" class="card-text" onclick="javascript: location.href ='{{url('/')}}/*********/{{$value->question_seq}}'">{{$value->desc_}}</p>
                   @if(!empty($value->gift))
                     <div class="card-text d-flex flex-row align-items-center">
                       <div class="icon-circle bg-light-yellow text-white">
@@ -355,11 +355,11 @@
                     {{-- <div class="align-self-start align-self-sm-center mb-sm-0 mb-2">
                     </div> --}}
                     <div>
-                      <button class="btn btn-theme bg-light-yellow text-white" onclick="jvascript: document.location.href='{{url('/vote')}}/{{$value->question_seq}}'">
+                      <button class="btn btn-theme bg-light-yellow text-white" onclick="jvascript: document.location.href='{{url('/*********')}}/{{$value->question_seq}}'">
                         <span>前往投票</span>
                         <i class="fas fa-caret-right"></i>
                       </button>
-                      <button class="btn btn-theme bg-orange text-white" onclick="javascript: location.href='{{url('/voteResult')}}/{{$value->question_seq}}';">
+                      <button class="btn btn-theme bg-orange text-white" onclick="javascript: location.href='{{url('/*********Result')}}/{{$value->question_seq}}';">
                         <span>觀看結果</span>
                         <i class="fas fa-caret-right"></i>
                       </button>
@@ -375,7 +375,7 @@
 
         {{-- <div class="card mb-5">
           <div class="row no-gutters">
-            <div class="col-12 col-lg-5 bg-white card-img-bg" style="background-image: url(https://prod-vote-image.nownews.com/question_img/4028818a7554ab980175b19b8cc474da/img);">
+            <div class="col-12 col-lg-5 bg-white card-img-bg" style="background-image: url(*********/question_img/4028818a7554ab980175b19b8cc474da/img);">
             </div>
             <div class="col-12 col-lg-7 bg-wheat">
               <div class="card-body">
@@ -425,31 +425,31 @@
     </section>
   @endif
 
-@if($over_vote->first())
+@if($over_*********->first())
   <section class="section">
     <div class="section-header d-flex flex-row justify-content-between">
       <div class="d-flex flex-row align-items-center">
-        <img class="section-icon mx-2" src="https://prod-vote-image.nownews.com/images/section-icon-03.svg" alt="">
+        <img class="section-icon mx-2" src="*********/images/section-icon-03.svg" alt="">
         <h2 class="section-title">已結束</h2>
       </div>
-      <button class="section-more" onclick="javascript: document.location.href='{{url('/voteType/over_vote')}}';">
+      <button class="section-more" onclick="javascript: document.location.href='{{url('/*********Type/over_*********')}}';">
         READ MORE
         <i class="fas fa-chevron-circle-right text-yellow"></i>
       </button>
     </div>
     <div class="section-content">
       <!-- component start -->
-      @foreach ($over_vote as $key => $value)
+      @foreach ($over_********* as $key => $value)
         <div class="card mb-5">
           <div class="icon-category">
             @if(strpos($value->title, 'PK') !== false)
-              <img src="https://prod-vote-image.nownews.com/images/icon-category-01.svg" alt="">
+              <img src="*********/images/icon-category-01.svg" alt="">
             @else
-              <img src="https://prod-vote-image.nownews.com/images/icon-category-02.svg" alt="">
+              <img src="*********/images/icon-category-02.svg" alt="">
             @endif
           </div>
           <div class="row no-gutters">
-          <div class="col-12 col-lg-5 bg-white card-img-bg" style="background-image: url('{{$value->img}}'); cursor:pointer;" onclick="javascript: location.href ='{{url('/')}}/voteResult/{{$value->question_seq}}'">
+          <div class="col-12 col-lg-5 bg-white card-img-bg" style="background-image: url('{{$value->img}}'); cursor:pointer;" onclick="javascript: location.href ='{{url('/')}}/*********Result/{{$value->question_seq}}'">
             </div>
             <div class="col-12 col-lg-7 bg-wheat">
               <div class="card-body">
@@ -463,14 +463,14 @@
                       <img src="{{ asset('images/card-sns-01.svg') }}" alt="">
                     </a> --}}
                       <div>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u={{url('/voteResult')}}/{{$value->question_seq}}" target="_blank">
-                          <img src="https://prod-vote-image.nownews.com/images/card-sns-02.svg" alt="">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{url('/*********Result')}}/{{$value->question_seq}}" target="_blank">
+                          <img src="*********/images/card-sns-02.svg" alt="">
                         </a>
-                        {{-- <a href="http://line.naver.jp/R/msg/text/?{{str_replace('18禁', '', str_replace('PK', '', $value->title))}} {{url('/voteResult')}}/{{$value->question_seq}}" target="_blank">
-                          <img src="https://prod-vote-image.nownews.com/images/card-sns-03.svg" alt="">
+                        {{-- <a href="http://line.naver.jp/R/msg/text/?{{str_replace('18禁', '', str_replace('PK', '', $value->title))}} {{url('/*********Result')}}/{{$value->question_seq}}" target="_blank">
+                          <img src="*********/images/card-sns-03.svg" alt="">
                         </a> --}}
-                        <a href="https://social-plugins.line.me/lineit/share?url={{url('/voteResult')}}/{{$value->question_seq}}" target="_blank">
-                          <img src="https://prod-vote-image.nownews.com/images/card-sns-03.svg" alt="">
+                        <a href="https://social-plugins.line.me/lineit/share?url={{url('/*********Result')}}/{{$value->question_seq}}" target="_blank">
+                          <img src="*********/images/card-sns-03.svg" alt="">
                         </a>
                       </div>
                   {{-- </div> --}}
@@ -480,8 +480,8 @@
                   <small class="text-muted">調查期間：{{date('Y/m/d', strtotime($value->question_date_s))}}~{{date('Y/m/d', strtotime($value->question_date_e))}}</small>
                   {{-- <small class="text-muted">{{$value->count + $value->weights}}人參加投票</small> --}}
                 </p>
-                <h3 style="cursor:pointer;" class="card-title" onclick="javascript: location.href ='{{url('/')}}/voteResult/{{$value->question_seq}}'">{{str_replace('18禁', '', str_replace('PK', '', $value->title))}}</h3>
-                <p style="cursor:pointer;" class="card-text" onclick="javascript: location.href ='{{url('/')}}/voteResult/{{$value->question_seq}}'">{{$value->desc_}}</p>
+                <h3 style="cursor:pointer;" class="card-title" onclick="javascript: location.href ='{{url('/')}}/*********Result/{{$value->question_seq}}'">{{str_replace('18禁', '', str_replace('PK', '', $value->title))}}</h3>
+                <p style="cursor:pointer;" class="card-text" onclick="javascript: location.href ='{{url('/')}}/*********Result/{{$value->question_seq}}'">{{$value->desc_}}</p>
                 @if(!empty($value->gift))
                   <div class="card-text d-flex flex-row align-items-center">
                     <div class="icon-circle bg-light-yellow text-white">
@@ -503,7 +503,7 @@
                 <div class="card-text my-3 d-flex flex-column flex-sm-row justify-content-end align-items-center">
                   
                   <div>
-                    <button class="btn btn-theme bg-light-yellow text-white" onclick="javascript: location.href='{{url('/voteResult')}}/{{$value->question_seq}}';">
+                    <button class="btn btn-theme bg-light-yellow text-white" onclick="javascript: location.href='{{url('/*********Result')}}/{{$value->question_seq}}';">
                       <span>觀看結果</span>
                       <i class="fas fa-caret-right"></i>
                     </button>
@@ -527,7 +527,7 @@
           <img src="{{ asset('images/icon-category-02.svg') }}" alt="">
         </div>
         <div class="row no-gutters">
-          <div class="col-12 col-lg-5 bg-white card-img-bg" style="background-image: url(https://prod-vote-image.nownews.com/question_img/4028818a7554ab980175ad35ba732c9a/img);">
+          <div class="col-12 col-lg-5 bg-white card-img-bg" style="background-image: url(*********/question_img/4028818a7554ab980175ad35ba732c9a/img);">
           </div>
           <div class="col-12 col-lg-7 bg-wheat">
             <div class="card-body">
@@ -577,11 +577,11 @@
   </section>
 @endif
 
-@if($interest_vote->first())
+@if($interest_*********->first())
   <section class="section">
     <div class="section-header d-flex flex-row justify-content-between">
       <div class="d-flex flex-row align-items-center">
-        <img class="section-icon mx-2" src="https://prod-vote-image.nownews.com/images/section-icon-04.svg" alt="">
+        <img class="section-icon mx-2" src="*********/images/section-icon-04.svg" alt="">
         <h2 class="section-title">您可能感興趣的投票</h2>
       </div>
       <button class="section-more d-none">
@@ -591,8 +591,8 @@
     </div>
     <div class="section-content position-relative">
       <div class="slider recommend-slider">
-        @foreach ($interest_vote as $key => $value)
-            <div class="slide-{{$key}} mx-2" onclick="javascript: location.href='{{url('/voteResult')}}/{{$value->question_seq}}';">
+        @foreach ($interest_********* as $key => $value)
+            <div class="slide-{{$key}} mx-2" onclick="javascript: location.href='{{url('/*********Result')}}/{{$value->question_seq}}';">
             <div>
               <img src="{{$value->img}}" width="100%" alt="">
             </div>
@@ -605,7 +605,7 @@
         
         {{-- <div class="slide-1 mx-2">
           <div>
-            <img src="https://prod-vote-image.nownews.com/question_img/4028818a7554ab980175ad35ba732c9a/img" width="100%" alt="">
+            <img src="*********/question_img/4028818a7554ab980175ad35ba732c9a/img" width="100%" alt="">
           </div>
           <div class="bg-yellow py-2 px-3">
             <span class="badge bg-white text-yellow">電影娛樂</span>
@@ -614,7 +614,7 @@
         </div>
         <div class="slide-2 mx-2">
           <div>
-            <img src="https://prod-vote-image.nownews.com/question_img/4028818a7554ab980175ad35ba732c9a/img" width="100%" alt="">
+            <img src="*********/question_img/4028818a7554ab980175ad35ba732c9a/img" width="100%" alt="">
           </div>
           <div class="bg-yellow py-2 px-3">
             <span class="badge bg-white text-yellow">電影娛樂</span>
@@ -623,7 +623,7 @@
         </div>
         <div class="slide-3 mx-2">
           <div>
-            <img src="https://prod-vote-image.nownews.com/question_img/4028818a7554ab980175ad305a222bd8/img" width="100%" alt="">
+            <img src="*********/question_img/4028818a7554ab980175ad305a222bd8/img" width="100%" alt="">
           </div>
           <div class="bg-yellow py-2 px-3">
             <span class="badge bg-white text-yellow">電影娛樂</span>

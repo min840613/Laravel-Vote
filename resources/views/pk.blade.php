@@ -3,16 +3,16 @@
 @section('meta_desc', $meta_desc)
 
 @section('self_mata')
-  {{-- @if(strpos(URL::current(), 'voteResult')) --}}
-    <meta property="article:section" content="NOWnews民調">
-    <meta property="article:published_time" content="{{date(DATE_W3C, mktime(date('H', strtotime($vote[0]['q_start'])), date('i', strtotime($vote[0]['q_start'])), date('s', strtotime($vote[0]['q_start'])), date('m', strtotime($vote[0]['q_start'])), date('d', strtotime($vote[0]['q_start'])), date('Y', strtotime($vote[0]['q_start']))))}}">
-    <meta property="article:modified_time" content="{{date(DATE_W3C, mktime(date('H', strtotime($vote[0]['q_modify_date'])), date('i', strtotime($vote[0]['q_modify_date'])), date('s', strtotime($vote[0]['q_modify_date'])), date('m', strtotime($vote[0]['q_modify_date'])), date('d', strtotime($vote[0]['q_modify_date'])), date('Y', strtotime($vote[0]['q_modify_date']))))}}">
+  {{-- @if(strpos(URL::current(), '*********Result')) --}}
+    <meta property="article:section" content="*********民調">
+    <meta property="article:published_time" content="{{date(DATE_W3C, mktime(date('H', strtotime($*********[0]['q_start'])), date('i', strtotime($*********[0]['q_start'])), date('s', strtotime($*********[0]['q_start'])), date('m', strtotime($*********[0]['q_start'])), date('d', strtotime($*********[0]['q_start'])), date('Y', strtotime($*********[0]['q_start']))))}}">
+    <meta property="article:modified_time" content="{{date(DATE_W3C, mktime(date('H', strtotime($*********[0]['q_modify_date'])), date('i', strtotime($*********[0]['q_modify_date'])), date('s', strtotime($*********[0]['q_modify_date'])), date('m', strtotime($*********[0]['q_modify_date'])), date('d', strtotime($*********[0]['q_modify_date'])), date('Y', strtotime($*********[0]['q_modify_date']))))}}">
   {{-- @endif --}}
 @endsection
 
 @section('self_css')
-<link rel="stylesheet" href="https://prod-vote-image.nownews.com/css/pk.css">
-{{-- <link rel="stylesheet" href="https://prod-vote-image.nownews.com/css/index.css"> --}}
+<link rel="stylesheet" href="*********/css/pk.css">
+{{-- <link rel="stylesheet" href="*********/css/index.css"> --}}
 {{-- <link rel="stylesheet" href="{{ asset('css/index.css') }}"> --}}
 <style>
   div.position-relative div.slider div.position-relative div.carousel-mask button:hover{
@@ -32,41 +32,41 @@
 
 @section('head_js')
 
-@if(strpos(URL::current(), 'voteResult') !== false)
+@if(strpos(URL::current(), '*********Result') !== false)
 
     <!-- 結構化語意 -->
     <script type="application/ld+json">
       {
           "@context": "http://schema.org",
           "@type": "NewsArticle",
-          "thumbnailUrl": "{{$vote[0]['q_img']}}",
+          "thumbnailUrl": "{{$*********[0]['q_img']}}",
           "url": "{{URL::current()}}",
           "mainEntityOfPage": "{{URL::current()}}",
-          "headline": "{{str_replace('18禁', '', str_replace('PK', '', $vote[0]['q_title']))}} | 投票結果",
-          "articleSection": "NOWnews民調",
-          "datePublished": "{{date(DATE_W3C, mktime(date('H', strtotime($vote[0]['q_start'])), date('i', strtotime($vote[0]['q_start'])), date('s', strtotime($vote[0]['q_start'])), date('m', strtotime($vote[0]['q_start'])), date('d', strtotime($vote[0]['q_start'])), date('Y', strtotime($vote[0]['q_start']))))}}",
-          "dateModified": "{{date(DATE_W3C, mktime(date('H', strtotime($vote[0]['q_modify_date'])), date('i', strtotime($vote[0]['q_modify_date'])), date('s', strtotime($vote[0]['q_modify_date'])), date('m', strtotime($vote[0]['q_modify_date'])), date('d', strtotime($vote[0]['q_modify_date'])), date('Y', strtotime($vote[0]['q_modify_date']))))}}",
+          "headline": "{{str_replace('18禁', '', str_replace('PK', '', $*********[0]['q_title']))}} | 投票結果",
+          "articleSection": "*********民調",
+          "datePublished": "{{date(DATE_W3C, mktime(date('H', strtotime($*********[0]['q_start'])), date('i', strtotime($*********[0]['q_start'])), date('s', strtotime($*********[0]['q_start'])), date('m', strtotime($*********[0]['q_start'])), date('d', strtotime($*********[0]['q_start'])), date('Y', strtotime($*********[0]['q_start']))))}}",
+          "dateModified": "{{date(DATE_W3C, mktime(date('H', strtotime($*********[0]['q_modify_date'])), date('i', strtotime($*********[0]['q_modify_date'])), date('s', strtotime($*********[0]['q_modify_date'])), date('m', strtotime($*********[0]['q_modify_date'])), date('d', strtotime($*********[0]['q_modify_date'])), date('Y', strtotime($*********[0]['q_modify_date']))))}}",
           "keywords": "",
-          "description": "{{$vote[0]['q_desc']}}",
+          "description": "{{$*********[0]['q_desc']}}",
           "image": {
             "@type": "ImageObject",
-            "contentUrl": "{{$vote[0]['q_img']}}",
-            "url": "{{$vote[0]['q_img']}}",
-            "name": "{{str_replace('18禁', '', str_replace('PK', '', $vote[0]['q_title']))}}",
+            "contentUrl": "{{$*********[0]['q_img']}}",
+            "url": "{{$*********[0]['q_img']}}",
+            "name": "{{str_replace('18禁', '', str_replace('PK', '', $*********[0]['q_title']))}}",
             "width": 1000,
             "height": 536
           },
           "author": {
             "@type": "Person",
-            "name": "NOWnews民調"
+            "name": "*********民調"
           },
           "publisher": {
             "@type": "Organization",
-            "name": "NOWnews今日新聞",
-            "url": "https://www.nownews.com",
+            "name": "*********今日新聞",
+            "url": "*********",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://www.nownews.com/amp/images/logo_1000x800.png",
+              "url": "*********/amp/images/logo_1000x800.png",
               "width": 1000,
               "height": 800
           }
@@ -81,34 +81,34 @@
       {
           "@context": "http://schema.org",
           "@type": "NewsArticle",
-          "thumbnailUrl": "{{$vote[0]['q_img']}}",
+          "thumbnailUrl": "{{$*********[0]['q_img']}}",
           "url": "{{URL::current()}}",
           "mainEntityOfPage": "{{URL::current()}}",
-          "headline": "{{str_replace('18禁', '', str_replace('PK', '', $vote[0]['q_title']))}}",
-          "articleSection": "NOWnews民調",
-          "datePublished": "{{date(DATE_W3C, mktime(date('H', strtotime($vote[0]['q_start'])), date('i', strtotime($vote[0]['q_start'])), date('s', strtotime($vote[0]['q_start'])), date('m', strtotime($vote[0]['q_start'])), date('d', strtotime($vote[0]['q_start'])), date('Y', strtotime($vote[0]['q_start']))))}}",
-          "dateModified": "{{date(DATE_W3C, mktime(date('H', strtotime($vote[0]['q_modify_date'])), date('i', strtotime($vote[0]['q_modify_date'])), date('s', strtotime($vote[0]['q_modify_date'])), date('m', strtotime($vote[0]['q_modify_date'])), date('d', strtotime($vote[0]['q_modify_date'])), date('Y', strtotime($vote[0]['q_modify_date']))))}}",
+          "headline": "{{str_replace('18禁', '', str_replace('PK', '', $*********[0]['q_title']))}}",
+          "articleSection": "*********民調",
+          "datePublished": "{{date(DATE_W3C, mktime(date('H', strtotime($*********[0]['q_start'])), date('i', strtotime($*********[0]['q_start'])), date('s', strtotime($*********[0]['q_start'])), date('m', strtotime($*********[0]['q_start'])), date('d', strtotime($*********[0]['q_start'])), date('Y', strtotime($*********[0]['q_start']))))}}",
+          "dateModified": "{{date(DATE_W3C, mktime(date('H', strtotime($*********[0]['q_modify_date'])), date('i', strtotime($*********[0]['q_modify_date'])), date('s', strtotime($*********[0]['q_modify_date'])), date('m', strtotime($*********[0]['q_modify_date'])), date('d', strtotime($*********[0]['q_modify_date'])), date('Y', strtotime($*********[0]['q_modify_date']))))}}",
           "keywords": "",
-          "description": "{{$vote[0]['q_desc']}}",
+          "description": "{{$*********[0]['q_desc']}}",
           "image": {
             "@type": "ImageObject",
-            "contentUrl": "{{$vote[0]['q_img']}}",
-            "url": "{{$vote[0]['q_img']}}",
-            "name": "{{str_replace('18禁', '', str_replace('PK', '', $vote[0]['q_title']))}}",
+            "contentUrl": "{{$*********[0]['q_img']}}",
+            "url": "{{$*********[0]['q_img']}}",
+            "name": "{{str_replace('18禁', '', str_replace('PK', '', $*********[0]['q_title']))}}",
             "width": 1000,
             "height": 536
           },
           "author": {
             "@type": "Person",
-            "name": "NOWnews民調"
+            "name": "*********民調"
           },
           "publisher": {
             "@type": "Organization",
-            "name": "NOWnews今日新聞",
-            "url": "https://www.nownews.com",
+            "name": "*********今日新聞",
+            "url": "*********",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://www.nownews.com/amp/images/logo_1000x800.png",
+              "url": "*********/amp/images/logo_1000x800.png",
               "width": 1000,
               "height": 800
           }
@@ -122,16 +122,16 @@
 
 
   <!-- 麵包屑 -->
-  @if(strpos(URL::current(), 'voteResult') !== false)
+  @if(strpos(URL::current(), '*********Result') !== false)
 
     <script type="application/ld+json">
       {   
         "@context":"http://schema.org",
           "@type":"BreadcrumbList",
           "itemListElement":[
-              {"@type":"ListItem","position":1,"name":"NOWnews民調","item":"https://vote.nownews.com"},
-              {"@type":"ListItem","position":2,"name":"{{$type_name}}","item":"https://vote.nownews.com/voteType/{{$type_key}}"},
-              {"@type":"ListItem","position":3,"name":"{{str_replace('18禁', '', str_replace('PK', '', $vote[0]['q_title']))}} | 投票結果","item":"{{URL::current()}}"}
+              {"@type":"ListItem","position":1,"name":"*********民調","item":"https://*********.*********.com"},
+              {"@type":"ListItem","position":2,"name":"{{$type_name}}","item":"https://*********.*********.com/*********Type/{{$type_key}}"},
+              {"@type":"ListItem","position":3,"name":"{{str_replace('18禁', '', str_replace('PK', '', $*********[0]['q_title']))}} | 投票結果","item":"{{URL::current()}}"}
           ]
       }
     </script>
@@ -143,9 +143,9 @@
         "@context":"http://schema.org",
           "@type":"BreadcrumbList",
           "itemListElement":[
-              {"@type":"ListItem","position":1,"name":"NOWnews民調","item":"https://vote.nownews.com"},
-              {"@type":"ListItem","position":2,"name":"{{$type_name}}","item":"https://vote.nownews.com/voteType/{{$type_key}}"},
-              {"@type":"ListItem","position":3,"name":"{{str_replace('18禁', '', str_replace('PK', '', $vote[0]['q_title']))}}","item":"{{URL::current()}}"}
+              {"@type":"ListItem","position":1,"name":"*********民調","item":"https://*********.*********.com"},
+              {"@type":"ListItem","position":2,"name":"{{$type_name}}","item":"https://*********.*********.com/*********Type/{{$type_key}}"},
+              {"@type":"ListItem","position":3,"name":"{{str_replace('18禁', '', str_replace('PK', '', $*********[0]['q_title']))}}","item":"{{URL::current()}}"}
           ]
       }
     </script>
@@ -159,56 +159,56 @@
   <div class="card mb-5">
     <div class="row no-gutters">
       <div class="col-12 col-lg">
-        <img src="{{$vote[0]['q_img']}}" class="card-img" alt="...">
+        <img src="{{$*********[0]['q_img']}}" class="card-img" alt="...">
       </div>
       <div class="col-12 col-lg bg-yellow">
         <div class="card-body">
-          <h3 class="card-title text-white">{{str_replace('18禁', '', str_replace('PK', '', $vote[0]['q_title']))}}</h3>
+          <h3 class="card-title text-white">{{str_replace('18禁', '', str_replace('PK', '', $*********[0]['q_title']))}}</h3>
           <p class="card-text">
-            調查期間：{{$vote[0]['q_start']}}~{{$vote[0]['q_end']}}
+            調查期間：{{$*********[0]['q_start']}}~{{$*********[0]['q_end']}}
           </p>
           <hr />
-          <p class="card-text">{{$vote[0]['q_desc']}}</p>
+          <p class="card-text">{{$*********[0]['q_desc']}}</p>
         </div>
       </div>
     </div>
   </div>
   <div class="pk-title">
     <h2 class="text-center">
-      <img src="https://prod-vote-image.nownews.com/images/fist-red.svg" alt="" width="40">
+      <img src="*********/images/fist-red.svg" alt="" width="40">
       <span class="mx-0 mx-md-5">PK擂台</span>
-      <img src="https://prod-vote-image.nownews.com/images/fist-blue.svg" alt="" width="40">
+      <img src="*********/images/fist-blue.svg" alt="" width="40">
     </h2>
     <p class="btn btn-theme gray-side bg-white gray-border d-block mx-auto my-5" style="width: fit-content;">
-      {{str_replace('18禁', '', str_replace('PK', '', $vote[0]['q_title']))}}
+      {{str_replace('18禁', '', str_replace('PK', '', $*********[0]['q_title']))}}
     </p>
   </div>
   <div class="pk-options row my-5">
     <div class="col">
       <div class="pk-option-1 d-flex flex-column align-items-center h-100 justify-content-between">
-        @if(date("Y-m-d") > $vote[0]['q_end'] || $has_vote)
-          <button type="button" class="option-img text-center" style="background-image: url('{{$vote[0]['all'][0]->t2_img}}');">
+        @if(date("Y-m-d") > $*********[0]['q_end'] || $has_*********)
+          <button type="button" class="option-img text-center" style="background-image: url('{{$*********[0]['all'][0]->t2_img}}');">
           </button>
         @else
-          <button type="button" class="option-img text-center" data-toggle="modal" data-target="#option-model-1" style="background-image: url('{{$vote[0]['all'][0]->t2_img}}');">
+          <button type="button" class="option-img text-center" data-toggle="modal" data-target="#option-model-1" style="background-image: url('{{$*********[0]['all'][0]->t2_img}}');">
           </button>
         @endif
-        <span class="my-1 option-name">{{$vote[0]['all'][0]->t2_name}}</span>
+        <span class="my-1 option-name">{{$*********[0]['all'][0]->t2_name}}</span>
         <div class="w-100 d-flex flex-column">
-          {{-- <span class="text-red my-1 option-vote text-center">{{$vote[0]['all'][0]->t2_count}} 票</span> --}}
+          {{-- <span class="text-red my-1 option-********* text-center">{{$*********[0]['all'][0]->t2_count}} 票</span> --}}
           <div class="w-100 d-flex flex-row align-items-center">
-            @if($vote[0]['total_count'] == 0)
-              <div class="progress-container col-12" data-vote="0" data-percent="0" data-side="left">
+            @if($*********[0]['total_count'] == 0)
+              <div class="progress-container col-12" data-*********="0" data-percent="0" data-side="left">
             @else
-              <div class="progress-container col-12" data-vote="{{$vote[0]['all'][0]->t2_count}}" data-percent="{{round(($vote[0]['all'][0]->t2_count/$vote[0]['total_count'])*100, 2)}}" data-side="left">
+              <div class="progress-container col-12" data-*********="{{$*********[0]['all'][0]->t2_count}}" data-percent="{{round(($*********[0]['all'][0]->t2_count/$*********[0]['total_count'])*100, 2)}}" data-side="left">
             @endif
                 <div class="progress">
-                @if($vote[0]['total_count'] == 0)
+                @if($*********[0]['total_count'] == 0)
                       <div class="progress-bar bg-red" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
                 @else
-                      <div class="progress-bar bg-red" role="progressbar" style="width: {{round(($vote[0]['all'][0]->t2_count/$vote[0]['total_count'])*100, 2)}}%" aria-valuenow="{{round(($vote[0]['all'][0]->t2_count/$vote[0]['total_count'])*100, 2)}}" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar bg-red" role="progressbar" style="width: {{round(($*********[0]['all'][0]->t2_count/$*********[0]['total_count'])*100, 2)}}%" aria-valuenow="{{round(($*********[0]['all'][0]->t2_count/$*********[0]['total_count'])*100, 2)}}" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
                 @endif
@@ -218,34 +218,34 @@
       </div>
     </div>
     <div class="text-center align-self-end">
-      <img class="vs" src="https://prod-vote-image.nownews.com/images/vs.svg" width="100">
+      <img class="vs" src="*********/images/vs.svg" width="100">
     </div>
     <div class="col">
       <div class="pk-option-2 d-flex flex-column align-items-center h-100 justify-content-between">
-        @if(date("Y-m-d") > $vote[0]['q_end'] || $has_vote)
-          <button type="button" class="option-img text-center" style="background-image: url('{{$vote[0]['all'][1]->t2_img}}');" onclick="javascript: alert('此投票已結束');">
+        @if(date("Y-m-d") > $*********[0]['q_end'] || $has_*********)
+          <button type="button" class="option-img text-center" style="background-image: url('{{$*********[0]['all'][1]->t2_img}}');" onclick="javascript: alert('此投票已結束');">
           </button>
         @else
-          <button type="button" class="option-img text-center" data-toggle="modal" data-target="#option-model-2" style="background-image: url('{{$vote[0]['all'][1]->t2_img}}');">
+          <button type="button" class="option-img text-center" data-toggle="modal" data-target="#option-model-2" style="background-image: url('{{$*********[0]['all'][1]->t2_img}}');">
           </button>
         @endif
         
-        <span class="my-1 option-name">{{$vote[0]['all'][1]->t2_name}}</span>
+        <span class="my-1 option-name">{{$*********[0]['all'][1]->t2_name}}</span>
         <div class="w-100 d-flex flex-column">
-          {{-- <span class="text-blue my-1 option-vote text-center">{{$vote[0]['all'][1]->t2_count}} 票</span> --}}
+          {{-- <span class="text-blue my-1 option-********* text-center">{{$*********[0]['all'][1]->t2_count}} 票</span> --}}
           <div class="w-100 d-flex flex-row-reverse align-items-center">
-            @if($vote[0]['total_count'] == 0)
-              <div class="progress-container col-12" data-vote="0" data-percent="0" data-side="right">
+            @if($*********[0]['total_count'] == 0)
+              <div class="progress-container col-12" data-*********="0" data-percent="0" data-side="right">
             @else
-              <div class="progress-container col-12" data-vote="{{$vote[0]['all'][1]->t2_count}}" data-percent="{{round(($vote[0]['all'][1]->t2_count/$vote[0]['total_count'])*100, 2)}}" data-side="right">
+              <div class="progress-container col-12" data-*********="{{$*********[0]['all'][1]->t2_count}}" data-percent="{{round(($*********[0]['all'][1]->t2_count/$*********[0]['total_count'])*100, 2)}}" data-side="right">
             @endif
                 <div class="progress" style="transform: rotateY(180deg);">
-                @if($vote[0]['total_count'] == 0)
+                @if($*********[0]['total_count'] == 0)
                       <div class="progress-bar bg-blue" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
                 @else
-                      <div class="progress-bar bg-blue" role="progressbar" style="width: {{round(($vote[0]['all'][1]->t2_count/$vote[0]['total_count'])*100, 2)}}%" aria-valuenow="{{round(($vote[0]['all'][1]->t2_count/$vote[0]['total_count'])*100, 2)}}" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar bg-blue" role="progressbar" style="width: {{round(($*********[0]['all'][1]->t2_count/$*********[0]['total_count'])*100, 2)}}%" aria-valuenow="{{round(($*********[0]['all'][1]->t2_count/$*********[0]['total_count'])*100, 2)}}" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
                 @endif
@@ -256,8 +256,8 @@
     </div>
   </div>
 
-  <input type="hidden" id='vote1_page' value="2">
-  <input type="hidden" id='vote2_page' value="2">
+  <input type="hidden" id='*********1_page' value="2">
+  <input type="hidden" id='*********2_page' value="2">
 
   <div class="pk-comments d-none d-md-flex row">
     <div class="col-12 col-md">
@@ -271,9 +271,9 @@
       </ul>
       <div class="tab-pane fade show active" id="hot1" role="tabpanel" aria-labelledby="option-1-hottest-tab">
       <div class="tab-content" id="comments-container-1">
-        {{-- <div class="fb-comments" data-href="{{url('/voteResult')}}/{{$question_id}}?fb_share = article1" data-numposts="5" data-width="100%"></div> --}}
-        @if($vote_command1->first())
-          @foreach ($vote_command1 as $value)
+        {{-- <div class="fb-comments" data-href="{{url('/*********Result')}}/{{$question_id}}?fb_share = article1" data-numposts="5" data-width="100%"></div> --}}
+        @if($*********_command1->first())
+          @foreach ($*********_command1 as $value)
             <div class="comment mb-5 mx-2">
               <div class="comment-info">
                 <i class="fas fa-user-circle text-muted"></i>
@@ -405,9 +405,9 @@
       </ul>
       <div class="tab-pane fade show active" id="hot2" role="tabpanel" aria-labelledby="option-2-hottest-tab">
       <div class="tab-content" id="comments-container-2">
-        {{-- <div class="fb-comments" data-href="{{url('/voteResult')}}/{{$question_id}}?fb_share = article2" data-numposts="5" data-width="100%"></div> --}}
-        @if($vote_command2->first())
-          @foreach ($vote_command2 as $value)
+        {{-- <div class="fb-comments" data-href="{{url('/*********Result')}}/{{$question_id}}?fb_share = article2" data-numposts="5" data-width="100%"></div> --}}
+        @if($*********_command2->first())
+          @foreach ($*********_command2 as $value)
             <div class="comment mb-5 mx-2">
               <div class="comment-info">
                 <i class="fas fa-user-circle text-muted"></i>
@@ -542,8 +542,8 @@
       <div class="tab-content" id="comments-container-mobile-1">
         <!-- 紅方 留言區 假資料 -->
         <div class="tab-pane fade show active" id="hot1-sm" role="tabpanel" aria-labelledby="option-1-sm-hottest-tab">
-          @if($vote_command1->first())
-            @foreach ($vote_command1 as $value)
+          @if($*********_command1->first())
+            @foreach ($*********_command1 as $value)
               <div class="comment mb-5 mx-2">
                 <div class="comment-info">
                   <i class="fas fa-user-circle text-muted"></i>
@@ -575,8 +575,8 @@
         </div>
         <!-- 藍方 留言區 假資料  -->
         <div class="tab-pane fade" id="new1-sm" role="tabpanel" aria-labelledby="option-1-sm-newest-tab">
-          @if($vote_command2->first())
-            @foreach ($vote_command2 as $value)
+          @if($*********_command2->first())
+            @foreach ($*********_command2 as $value)
               <div class="comment mb-5 mx-2">
                 <div class="comment-info">
                   <i class="fas fa-user-circle text-muted"></i>
@@ -609,20 +609,20 @@
       </div>
     </div>
   </div>
-  @if ($being_vote->first())
+  @if ($being_*********->first())
     <section class="section">
       <div class="position-relative">
         <div class="d-flex flex-row align-items-center" style='margin-bottom: 1.5rem;'>
-          <img class="section-icon mx-2" src="https://prod-vote-image.nownews.com/images/section-icon-02.svg" alt="">
+          <img class="section-icon mx-2" src="*********/images/section-icon-02.svg" alt="">
           <h2 class="section-title">火熱投票中</h2>
         </div>
         <div class="slider index-slider">
-          @foreach ($being_vote as $key => $value)
+          @foreach ($being_********* as $key => $value)
             <div class="slide-{{$key}} position-relative">
               <div class="carousel-mask">
                 <h2>{{str_replace('18禁', '', str_replace('PK', '', $value->title))}}</h2>
                 {{-- <span>火熱投票中</span> --}}
-                  <button class="btn btn-outline text-white" style="font-weight: bold;" onclick="javascript: location.href='{{url('/vote')}}/{{$value->question_seq}}';">查看完整內容</button>
+                  <button class="btn btn-outline text-white" style="font-weight: bold;" onclick="javascript: location.href='{{url('/*********')}}/{{$value->question_seq}}';">查看完整內容</button>
               </div>
               <img src="{{$value->img}}" width="100%" alt="">
             </div>
@@ -634,7 +634,7 @@
               <span>火熱投票中</span>
               <button class="btn btn-outline text-white">查看完整內容</button>
             </div>
-            <img src="https://prod-vote-image.nownews.com/question_img/4028818a7554ab980175ad35ba732c9a/img" width="100%" alt="">
+            <img src="*********/question_img/4028818a7554ab980175ad35ba732c9a/img" width="100%" alt="">
           </div>
           <div class="slide-2 position-relative">
             <div class="carousel-mask">
@@ -642,7 +642,7 @@
               <span>火熱投票中</span>
               <button class="btn btn-outline text-white" href="">查看完整內容</button>
             </div>
-            <img src="https://prod-vote-image.nownews.com/question_img/4028818a7554ab980175ad305a222bd8/img" width="100%" alt="">
+            <img src="*********/question_img/4028818a7554ab980175ad305a222bd8/img" width="100%" alt="">
           </div>
           <div class="slide-3 position-relative">
             <div class="carousel-mask">
@@ -650,7 +650,7 @@
               <span>火熱投票中</span>
               <button class="btn btn-outline text-white" href="">查看完整內容</button>
             </div>
-            <img src="https://prod-vote-image.nownews.com/question_img/4028818a7554ab980175ad305a222bd8/img" width="100%" alt="">
+            <img src="*********/question_img/4028818a7554ab980175ad305a222bd8/img" width="100%" alt="">
           </div> --}}
         </div>
         <div class="carousel-arrows prev"></div>
@@ -660,11 +660,11 @@
     @endif
 
 
-    @if($interest_vote->first())
+    @if($interest_*********->first())
   <section class="section">
     <div class="section-header d-flex flex-row justify-content-between">
       <div class="d-flex flex-row align-items-center">
-        <img class="section-icon mx-2" src="https://prod-vote-image.nownews.com/images/section-icon-04.svg" alt="">
+        <img class="section-icon mx-2" src="*********/images/section-icon-04.svg" alt="">
         <h2 class="section-title">您可能感興趣的投票</h2>
       </div>
       <button class="section-more d-none">
@@ -674,8 +674,8 @@
     </div>
     <div class="section-content position-relative">
       <div class="slider recommend-slider">
-        @foreach ($interest_vote as $key => $value)
-            <div class="slide-{{$key}} mx-2" onclick="javascript: location.href='{{url('/voteResult')}}/{{$value->question_seq}}';">
+        @foreach ($interest_********* as $key => $value)
+            <div class="slide-{{$key}} mx-2" onclick="javascript: location.href='{{url('/*********Result')}}/{{$value->question_seq}}';">
             <div>
               <img src="{{$value->img}}" width="100%" alt="">
             </div>
@@ -688,7 +688,7 @@
         
         {{-- <div class="slide-1 mx-2">
           <div>
-            <img src="https://prod-vote-image.nownews.com/question_img/4028818a7554ab980175ad35ba732c9a/img" width="100%" alt="">
+            <img src="*********/question_img/4028818a7554ab980175ad35ba732c9a/img" width="100%" alt="">
           </div>
           <div class="bg-yellow py-2 px-3">
             <span class="badge bg-white text-yellow">電影娛樂</span>
@@ -697,7 +697,7 @@
         </div>
         <div class="slide-2 mx-2">
           <div>
-            <img src="https://prod-vote-image.nownews.com/question_img/4028818a7554ab980175ad35ba732c9a/img" width="100%" alt="">
+            <img src="*********/question_img/4028818a7554ab980175ad35ba732c9a/img" width="100%" alt="">
           </div>
           <div class="bg-yellow py-2 px-3">
             <span class="badge bg-white text-yellow">電影娛樂</span>
@@ -706,7 +706,7 @@
         </div>
         <div class="slide-3 mx-2">
           <div>
-            <img src="https://prod-vote-image.nownews.com/question_img/4028818a7554ab980175ad305a222bd8/img" width="100%" alt="">
+            <img src="*********/question_img/4028818a7554ab980175ad305a222bd8/img" width="100%" alt="">
           </div>
           <div class="bg-yellow py-2 px-3">
             <span class="badge bg-white text-yellow">電影娛樂</span>
@@ -725,15 +725,15 @@
     <div class="modal-content">
       <div class="modal-body">
         <p class="btn btn-theme gray-side bg-white gray-border d-block mx-auto my-3" style="width: fit-content;">
-          {{str_replace('18禁', '', str_replace('PK', '', $vote[0]['q_title']))}}
+          {{str_replace('18禁', '', str_replace('PK', '', $*********[0]['q_title']))}}
         </p>
-        <form id="comment-option-1-form" class="d-flex flex-column align-items-center" method="post" action="{{url('/insertVote')}}/{{$question_id}}/{{$vote[0]['q_login']}}">
+        <form id="comment-option-1-form" class="d-flex flex-column align-items-center" method="post" action="{{url('/insert*********')}}/{{$question_id}}/{{$*********[0]['q_login']}}">
           {{ csrf_field() }}
-          <input type="hidden" name="form_answer[{{$vote[0]['all'][0]->t1_topic01_seq}}][answer_1][t2_seq]" value="input_other_1/{{$vote[0]['all'][0]->t2_topic02_seq}}">
-          <div class="option-img text-center" style="background-image: url('{{$vote[0]['all'][0]->t2_img}}');">
+          <input type="hidden" name="form_answer[{{$*********[0]['all'][0]->t1_topic01_seq}}][answer_1][t2_seq]" value="input_other_1/{{$*********[0]['all'][0]->t2_topic02_seq}}">
+          <div class="option-img text-center" style="background-image: url('{{$*********[0]['all'][0]->t2_img}}');">
           </div>
-          <span class="option-name my-3">{{$vote[0]['all'][0]->t2_name}}</span>
-          <textarea class="my-3" name="form_answer[{{$vote[0]['all'][0]->t1_topic01_seq}}][answer_1][other]" id="comment-textarea" cols="30" rows="10" placeholder="留言支持你的選擇(必填)" required></textarea>
+          <span class="option-name my-3">{{$*********[0]['all'][0]->t2_name}}</span>
+          <textarea class="my-3" name="form_answer[{{$*********[0]['all'][0]->t1_topic01_seq}}][answer_1][other]" id="comment-textarea" cols="30" rows="10" placeholder="留言支持你的選擇(必填)" required></textarea>
           <div class="my-3">
             <input class="btn btn-theme gray-side bg-yellow text-white" style="width: 110px;" type="submit" value="傳送">
             <button type="button" class="btn btn-theme gray-side bg-white gray-border" data-dismiss="modal">取消</button>
@@ -748,15 +748,15 @@
     <div class="modal-content">
       <div class="modal-body">
         <p class="btn btn-theme gray-side bg-white gray-border d-block mx-auto my-3" style="width: fit-content;">
-          {{str_replace('18禁', '', str_replace('PK', '', $vote[0]['q_title']))}}
+          {{str_replace('18禁', '', str_replace('PK', '', $*********[0]['q_title']))}}
         </p>
-        <form id="comment-option-2-form" class="d-flex flex-column align-items-center" method="post" action="{{url('/insertVote')}}/{{$question_id}}/{{$vote[0]['q_login']}}">
+        <form id="comment-option-2-form" class="d-flex flex-column align-items-center" method="post" action="{{url('/insert*********')}}/{{$question_id}}/{{$*********[0]['q_login']}}">
           {{ csrf_field() }}
-          <input type="hidden" name="form_answer[{{$vote[0]['all'][1]->t1_topic01_seq}}][answer_1][t2_seq]" value="input_other_1/{{$vote[0]['all'][1]->t2_topic02_seq}}">
-          <div class="option-img text-center" style="background-image: url('{{$vote[0]['all'][1]->t2_img}}');">
+          <input type="hidden" name="form_answer[{{$*********[0]['all'][1]->t1_topic01_seq}}][answer_1][t2_seq]" value="input_other_1/{{$*********[0]['all'][1]->t2_topic02_seq}}">
+          <div class="option-img text-center" style="background-image: url('{{$*********[0]['all'][1]->t2_img}}');">
           </div>
-          <span class="option-name my-3">{{$vote[0]['all'][1]->t2_name}}</span>
-          <textarea class="my-3" name="form_answer[{{$vote[0]['all'][1]->t1_topic01_seq}}][answer_1][other]" id="comment-textarea" cols="30" rows="10" placeholder="留言支持你的選擇(必填)" required></textarea>
+          <span class="option-name my-3">{{$*********[0]['all'][1]->t2_name}}</span>
+          <textarea class="my-3" name="form_answer[{{$*********[0]['all'][1]->t1_topic01_seq}}][answer_1][other]" id="comment-textarea" cols="30" rows="10" placeholder="留言支持你的選擇(必填)" required></textarea>
           <div class="my-3">
             <input class="btn btn-theme gray-side bg-yellow text-white" style="width: 110px;" type="submit" value="傳送">
             <button type="button" class="btn btn-theme gray-side bg-white gray-border" data-dismiss="modal">取消</button>
@@ -852,7 +852,7 @@
     row: 1,
   })
 </script>
-@if(strpos($vote[0]['q_title'], '18禁') !== false)
+@if(strpos($*********[0]['q_title'], '18禁') !== false)
   <script>
     $(document).ready(function(){
       $('#rated-modal').modal('show');
@@ -862,10 +862,10 @@
 
 <script>
   function ajax_comman_one(){
-    var page = $('#vote1_page').val();
-    var url = "{{url('/')}}" + "/ajax/comment/" + "{{$vote[0]['all'][0]->t1_topic01_seq}}" + "/" + "{{$vote[0]['all'][0]->t2_topic02_seq}}" + "/" + page;
+    var page = $('#*********1_page').val();
+    var url = "{{url('/')}}" + "/ajax/comment/" + "{{$*********[0]['all'][0]->t1_topic01_seq}}" + "/" + "{{$*********[0]['all'][0]->t2_topic02_seq}}" + "/" + page;
     console.log(url);
-    $('#vote1_page').val(parseInt(page)+1);
+    $('#*********1_page').val(parseInt(page)+1);
     $.get(url, function (data) {
       if (data.length == 0) {
         $('#more_comment_1').remove();
@@ -897,10 +897,10 @@
   }
 
   function ajax_comman_two(){
-    var page = $('#vote2_page').val();
-    var url = "{{url('/')}}" + "/ajax/comment/" + "{{$vote[0]['all'][1]->t1_topic01_seq}}" + "/" + "{{$vote[0]['all'][1]->t2_topic02_seq}}" + "/" + page;
+    var page = $('#*********2_page').val();
+    var url = "{{url('/')}}" + "/ajax/comment/" + "{{$*********[0]['all'][1]->t1_topic01_seq}}" + "/" + "{{$*********[0]['all'][1]->t2_topic02_seq}}" + "/" + page;
     console.log(url);
-    $('#vote2_page').val(parseInt(page)+1);
+    $('#*********2_page').val(parseInt(page)+1);
     $.get(url, function (data) {
       if (data.length == 0) {
         $('#more_comment_2').remove();

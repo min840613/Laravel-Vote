@@ -54,7 +54,7 @@
   }
 
   .progress-container::after {
-    content: attr(data-vote) '票';
+    content: attr(data-*********) '票';
     display: inline-block;
     position: absolute;
     right: 1.5rem;
@@ -142,7 +142,7 @@
         <div class="col-12 d-flex flex-column">
           <span>t netus et malesuada fames ac turpis egestas. Etiam matti</span>
           <div class="row align-items-center">
-            <div class="col-12 col-sm-11 progress-container" data-vote="1111" data-percent="75">
+            <div class="col-12 col-sm-11 progress-container" data-*********="1111" data-percent="75">
               <div class="progress">
                 <div class="progress-bar bg-yellow" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
@@ -154,7 +154,7 @@
         <div class="col-12 d-flex flex-column">
           <span>venenatis pharetra odio mollis. Cras id diam ut sem sollicitudin faucibus. Morbi id metus ullamcorper, convallis turpis a, iaculis purus. Morbi lobortis ante </span>
           <div class="row align-items-center">
-            <div class="col-12 col-sm-11 progress-container" data-vote="1111" data-percent="75">
+            <div class="col-12 col-sm-11 progress-container" data-*********="1111" data-percent="75">
               <div class="progress">
                 <div class="progress-bar bg-yellow" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
@@ -166,7 +166,7 @@
         <div class="col-12 d-flex flex-column">
           <span>t netus et malesuada fames ac turpis egestas. Etiam matti</span>
           <div class="row align-items-center">
-            <div class="col-12 col-sm-11 progress-container" data-vote="1111" data-percent="75">
+            <div class="col-12 col-sm-11 progress-container" data-*********="1111" data-percent="75">
               <div class="progress">
                 <div class="progress-bar bg-yellow" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
@@ -185,7 +185,7 @@
         <div class="col-7 col-sm-9 d-flex flex-column">
           <span>t netus et malesuada fames ac turpis egestas. Etiam matti</span>
           <div class="row align-items-center">
-            <div class="col progress-container" data-vote="1111" data-percent="75">
+            <div class="col progress-container" data-*********="1111" data-percent="75">
               <div class="progress">
                 <div class="progress-bar bg-yellow" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
@@ -200,7 +200,7 @@
         <div class="col-7 col-sm-9 d-flex flex-column">
           <span>t netus et malesuada fames ac turpis egestas. Etiam mattit netus et malesuada fames ac turpis egestas. Etiam mattit netus et malesuada fames ac turpis egestas. Etiam matti</span>
           <div class="row align-items-center">
-            <div class="col progress-container" data-vote="1111" data-percent="75">
+            <div class="col progress-container" data-*********="1111" data-percent="75">
               <div class="progress">
                 <div class="progress-bar bg-yellow" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
@@ -215,7 +215,7 @@
         <div class="col-7 col-sm-9 d-flex flex-column">
           <span>t net</span>
           <div class="row align-items-center">
-            <div class="col progress-container" data-vote="1111" data-percent="75">
+            <div class="col progress-container" data-*********="1111" data-percent="75">
               <div class="progress">
                 <div class="progress-bar bg-yellow" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
               </div>

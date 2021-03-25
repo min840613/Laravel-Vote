@@ -20,16 +20,16 @@ class apiController extends Controller
         $this->DB = new apiModel();
     }
     
-    public function api_being_vote(){
+    public function api_being_*********(){
         
-        $result = $this->DB->api_being_vote();
+        $result = $this->DB->api_being_*********();
 
         return json_encode($result);
     }
 
-    public function api_being_pk_vote(){
+    public function api_being_pk_*********(){
         
-        $result = $this->DB->api_being_pk_vote();
+        $result = $this->DB->api_being_pk_*********();
 
         return json_encode($result);
     }
@@ -47,27 +47,27 @@ class apiController extends Controller
         if($question->first()){
             foreach($question as $value){
                 if($value->img){
-                    $url = 'https://vote-backend.nownews.com/images/question/'.$value->question_seq.'/img';
+                    $url = '*********/images/question/'.$value->question_seq.'/img';
                     $imageDataEncoded = base64_encode(file_get_contents($url));
                     $imageData = base64_decode($imageDataEncoded);
                     $source = imagecreatefromstring($imageData);
                     // $angle = 90;
                     // $rotate = imagerotate($source, $angle, 0); // if want to rotate the image
-                    $imageName = "/var/www/vote2021/vote2021/public/baseToJPG/".$value->question_seq.".jpg";
+                    $imageName = "/var/www/*********2021/*********2021/public/baseToJPG/".$value->question_seq.".jpg";
                     $imageSave = imagejpeg($source,$imageName,100);
 
                     // 縮圖
-                    $imageName_sm = "/var/www/vote2021/vote2021/public/baseToJPG/".$value->question_seq."-sm.jpg";
+                    $imageName_sm = "/var/www/*********2021/*********2021/public/baseToJPG/".$value->question_seq."-sm.jpg";
                     $image_sm = imagescale($source, 800); //縮圖
                     $imageSave = imagejpeg($image_sm,$imageName_sm,80);
                     imagedestroy($source);
-                    $process = new Process(['sudo', 'cp', '/var/www/vote2021/vote2021/public/baseToJPG/'.$value->question_seq.'.jpg', '/mnt/baseToJPG']);
+                    $process = new Process(['sudo', 'cp', '/var/www/*********2021/*********2021/public/baseToJPG/'.$value->question_seq.'.jpg', '/mnt/baseToJPG']);
                     $process->run();
                     if (!$process->isSuccessful()) { 
                         return 'table：question & id：'.$value->question_seq.' 失敗';
                     }
 
-                    $process = new Process(['sudo', 'cp', '/var/www/vote2021/vote2021/public/baseToJPG/'.$value->question_seq.'-sm.jpg', '/mnt/baseToJPG']);
+                    $process = new Process(['sudo', 'cp', '/var/www/*********2021/*********2021/public/baseToJPG/'.$value->question_seq.'-sm.jpg', '/mnt/baseToJPG']);
                     $process->run();
                     if (!$process->isSuccessful()) { 
                         return 'table：question & id：'.$value->question_seq.' 小圖失敗';
@@ -79,27 +79,27 @@ class apiController extends Controller
                 if($topic01->first()){
                     foreach($topic01 as $val){
                         if($val->img){
-                            $url = 'https://vote-backend.nownews.com/images/topic01/'.$val->topic01_seq.'/img';
+                            $url = '*********/images/topic01/'.$val->topic01_seq.'/img';
                             $imageDataEncoded = base64_encode(file_get_contents($url));
                             $imageData = base64_decode($imageDataEncoded);
                             $source = imagecreatefromstring($imageData);
                             // $angle = 90;
                             // $rotate = imagerotate($source, $angle, 0); // if want to rotate the image
-                            $imageName = "/var/www/vote2021/vote2021/public/baseToJPG/".$val->topic01_seq.".jpg";
+                            $imageName = "/var/www/*********2021/*********2021/public/baseToJPG/".$val->topic01_seq.".jpg";
                             $imageSave = imagejpeg($source,$imageName,100);
 
                             // 縮圖
-                            $imageName_sm = "/var/www/vote2021/vote2021/public/baseToJPG/".$val->topic01_seq."-sm.jpg";
+                            $imageName_sm = "/var/www/*********2021/*********2021/public/baseToJPG/".$val->topic01_seq."-sm.jpg";
                             $image_sm = imagescale($source, 800); //縮圖
                             $imageSave = imagejpeg($image_sm,$imageName_sm,80);
                             imagedestroy($source);
-                            $process = new Process(['sudo', 'cp', '/var/www/vote2021/vote2021/public/baseToJPG/'.$val->topic01_seq.'.jpg', '/mnt/baseToJPG']);
+                            $process = new Process(['sudo', 'cp', '/var/www/*********2021/*********2021/public/baseToJPG/'.$val->topic01_seq.'.jpg', '/mnt/baseToJPG']);
                             $process->run();
                             if (!$process->isSuccessful()) { 
                                 return 'table：topic01 & id：'.$val->topic01_seq.' 失敗';
                             }
 
-                            $process = new Process(['sudo', 'cp', '/var/www/vote2021/vote2021/public/baseToJPG/'.$val->topic01_seq.'-sm.jpg', '/mnt/baseToJPG']);
+                            $process = new Process(['sudo', 'cp', '/var/www/*********2021/*********2021/public/baseToJPG/'.$val->topic01_seq.'-sm.jpg', '/mnt/baseToJPG']);
                             $process->run();
                             if (!$process->isSuccessful()) { 
                                 return 'table：topic01 & id：'.$val->topic01_seq.' 小圖失敗';
@@ -111,27 +111,27 @@ class apiController extends Controller
                         if($topic02->first()){
                             foreach($topic02 as $v){
                                 if($v->img){
-                                    $url = 'https://vote-backend.nownews.com/images/topic02/'.$v->topic02_seq.'/img';
+                                    $url = '*********/images/topic02/'.$v->topic02_seq.'/img';
                                     $imageDataEncoded = base64_encode(file_get_contents($url));
                                     $imageData = base64_decode($imageDataEncoded);
                                     $source = imagecreatefromstring($imageData);
                                     // $angle = 90;
                                     // $rotate = imagerotate($source, $angle, 0); // if want to rotate the image
-                                    $imageName = "/var/www/vote2021/vote2021/public/baseToJPG/".$v->topic02_seq.".jpg";
+                                    $imageName = "/var/www/*********2021/*********2021/public/baseToJPG/".$v->topic02_seq.".jpg";
                                     $imageSave = imagejpeg($source,$imageName,100);
 
                                     // 縮圖
-                                    $imageName_sm = "/var/www/vote2021/vote2021/public/baseToJPG/".$v->topic02_seq."-sm.jpg";
+                                    $imageName_sm = "/var/www/*********2021/*********2021/public/baseToJPG/".$v->topic02_seq."-sm.jpg";
                                     $image_sm = imagescale($source, 800); //縮圖
                                     $imageSave = imagejpeg($image_sm,$imageName_sm,80);
                                     imagedestroy($source);
-                                    $process = new Process(['sudo', 'cp', '/var/www/vote2021/vote2021/public/baseToJPG/'.$v->topic02_seq.'.jpg', '/mnt/baseToJPG']);
+                                    $process = new Process(['sudo', 'cp', '/var/www/*********2021/*********2021/public/baseToJPG/'.$v->topic02_seq.'.jpg', '/mnt/baseToJPG']);
                                     $process->run();
                                     if (!$process->isSuccessful()) { 
                                         return 'table：topic02 & id：'.$v->topic02_seq.' 失敗';
                                     }
 
-                                    $process = new Process(['sudo', 'cp', '/var/www/vote2021/vote2021/public/baseToJPG/'.$v->topic02_seq.'-sm.jpg', '/mnt/baseToJPG']);
+                                    $process = new Process(['sudo', 'cp', '/var/www/*********2021/*********2021/public/baseToJPG/'.$v->topic02_seq.'-sm.jpg', '/mnt/baseToJPG']);
                                     $process->run();
                                     if (!$process->isSuccessful()) { 
                                         return 'table：topic02 & id：'.$v->topic02_seq.' 小圖失敗';
@@ -171,7 +171,7 @@ class apiController extends Controller
     }
 
     public function clear_cdn($json){
-        $url = 'https://ap.mlytics.com/api/v1/zones/vote.nownews.com/purges/';
+        $url = 'https://ap.mlytics.com/api/v1/zones/*********.*********.com/purges/';
         //init curl
         $ch = curl_init();
         //curl_setopt可以設定curl參數

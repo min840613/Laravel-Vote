@@ -171,7 +171,7 @@
       <div class="row justify-content-between">
         <div class="col-12 col-sm-6 col-md-4 justify-content-center custom-control custom-radio">
           <label for="form-question-02-v-1">
-            <img src="https://prod-vote-image.nownews.com/question_img/4028818a7554ab980175ab2a4c397d5f/img" alt="" width="180">
+            <img src="*********/question_img/4028818a7554ab980175ab2a4c397d5f/img" alt="" width="180">
           </label>
           <div>
             <input type="radio" id="form-question-02-v-1" name="form-question-02" class="custom-control-input" value="0" required>
@@ -180,7 +180,7 @@
         </div>
         <div class="col-12 col-sm-6 col-md-4 justify-content-center custom-control custom-radio">
           <label for="form-question-02-v-2">
-            <img src="https://prod-vote-image.nownews.com/question_img/4028818a7554ab980175ab2a4c397d5f/img" alt="" width="180">
+            <img src="*********/question_img/4028818a7554ab980175ab2a4c397d5f/img" alt="" width="180">
           </label>
           <div>
             <input type="radio" id="form-question-02-v-2" name="form-question-02" class="custom-control-input" value="0" required>
@@ -189,7 +189,7 @@
         </div>
         <div class="col-12 col-sm-6 col-md-4 justify-content-center custom-control custom-radio">
           <label for="form-question-02-v-3">
-            <img src="https://prod-vote-image.nownews.com/question_img/4028818a7554ab980175ab2a4c397d5f/img" alt="" width="180">
+            <img src="*********/question_img/4028818a7554ab980175ab2a4c397d5f/img" alt="" width="180">
           </label>
           <div>
             <input type="radio" id="form-question-02-v-3" name="form-question-02" class="custom-control-input" value="0" required>
@@ -211,7 +211,7 @@
       <div class="row justify-content-between">
         <div class="col-12 col-sm-5 col-md-4 justify-content-center custom-control custom-checkbox">
           <label for="customCheck1">
-            <img src="https://prod-vote-image.nownews.com/question_img/4028818a7554ab980175ab2a4c397d5f/img" alt="" width="180">
+            <img src="*********/question_img/4028818a7554ab980175ab2a4c397d5f/img" alt="" width="180">
           </label>
           <div class="custom-control custom-checkbox">
             <input type="checkbox" class="custom-control-input" id="customCheck1" name="customCheck1">
@@ -220,7 +220,7 @@
         </div>
         <div class="col-12 col-sm-5 col-md-4 justify-content-center custom-control custom-checkbox">
           <label for="customCheck2">
-            <img src="https://prod-vote-image.nownews.com/question_img/4028818a7554ab980175ab2a4c397d5f/img" alt="" width="180">
+            <img src="*********/question_img/4028818a7554ab980175ab2a4c397d5f/img" alt="" width="180">
           </label>
           <div class="custom-control custom-checkbox">
             <input type="checkbox" class="custom-control-input" id="customCheck2" name="customCheck2">
@@ -229,7 +229,7 @@
         </div>
         <div class="col-12 col-sm-5 col-md-4 justify-content-center custom-control custom-checkbox">
           <label for="customCheck3">
-            <img src="https://prod-vote-image.nownews.com/question_img/4028818a7554ab980175ab2a4c397d5f/img" alt="" width="180">
+            <img src="*********/question_img/4028818a7554ab980175ab2a4c397d5f/img" alt="" width="180">
           </label>
           <div class="custom-control custom-checkbox">
             <input type="checkbox" class="custom-control-input" id="customCheck3" name="customCheck3">
@@ -334,28 +334,28 @@
     <div class="section-content position-relative">
       <div class="slider hot-slider">
         <div class="mx-3 slide-2 position-relative">
-          <div class="bg-img d-none d-md-block" style="background-image: url(https://prod-vote-image.nownews.com/question_img/4028818a7554ab980175ab2a4c397d5f/img);"></div>
+          <div class="bg-img d-none d-md-block" style="background-image: url(*********/question_img/4028818a7554ab980175ab2a4c397d5f/img);"></div>
           <div class="position-absolute mt-2 ml-2 slider-category">
             <img src="{{ asset('images/icon-category-01.svg') }}" alt="" width="100%">
           </div>
           <div class="carousel-mask">
             <h2>你最喜歡Ralph Fiennes演過的哪個角色？</h2>
           </div>
-          <img class="d-inline-block d-md-none" src="https://prod-vote-image.nownews.com/question_img/4028818a7554ab980175ab2a4c397d5f/img" width="100%" alt="">
+          <img class="d-inline-block d-md-none" src="*********/question_img/4028818a7554ab980175ab2a4c397d5f/img" width="100%" alt="">
           <div class="bg-yellow py-2 px-3 carousel-body">
             <span>調查期間：2020/01/01~2020/01/02</span>
             <p>《我的婆婆怎麼那麼可愛》上周迎來完結篇，收視再創高峰 5.55，是公視開台至今......</p>
           </div>
         </div>
         <div class="mx-3 slide-3 position-relative">
-          <div class="bg-img d-none d-md-block" style="background-image: url(https://prod-vote-image.nownews.com/question_img/4028818a7554ab980175ab2a4c397d5f/img);"></div>
+          <div class="bg-img d-none d-md-block" style="background-image: url(*********/question_img/4028818a7554ab980175ab2a4c397d5f/img);"></div>
           <div class="position-absolute mt-2 ml-2 slider-category">
             <img src="{{ asset('images/icon-category-01.svg') }}" alt="" width="100%">
           </div>
           <div class="carousel-mask">
             <h2>你最喜歡Ralph Fiennes演過的哪個角色？</h2>
           </div>
-          <img class="d-inline-block d-md-none" src="https://prod-vote-image.nownews.com/question_img/4028818a7554ab980175ab2a4c397d5f/img" width="100%" alt="">
+          <img class="d-inline-block d-md-none" src="*********/question_img/4028818a7554ab980175ab2a4c397d5f/img" width="100%" alt="">
           <div class="bg-yellow py-2 px-3 carousel-body">
             <span>調查期間：2020/01/01~2020/01/02</span>
             <p>《我的婆婆怎麼那麼可愛》上周迎來完結篇，收視再創高峰 5.55，是公視開台至今......</p>
@@ -381,7 +381,7 @@
       <div class="slider recommend-slider">
         <div class="slide-1 mx-2">
           <div>
-            <img src="https://prod-vote-image.nownews.com/question_img/4028818a7554ab980175ab2a4c397d5f/img" width="100%" alt="">
+            <img src="*********/question_img/4028818a7554ab980175ab2a4c397d5f/img" width="100%" alt="">
           </div>
           <div class="bg-yellow py-2 px-3">
             <span class="badge bg-white text-yellow">電影娛樂</span>
@@ -390,7 +390,7 @@
         </div>
         <div class="slide-2 mx-2">
           <div>
-            <img src="https://prod-vote-image.nownews.com/question_img/4028818a7554ab980175ad35ba732c9a/img" width="100%" alt="">
+            <img src="*********/question_img/4028818a7554ab980175ad35ba732c9a/img" width="100%" alt="">
           </div>
           <div class="bg-yellow py-2 px-3">
             <span class="badge bg-white text-yellow">電影娛樂</span>
@@ -399,7 +399,7 @@
         </div>
         <div class="slide-3 mx-2">
           <div>
-            <img src="https://prod-vote-image.nownews.com/question_img/4028818a7554ab980175ad305a222bd8/img" width="100%" alt="">
+            <img src="*********/question_img/4028818a7554ab980175ad305a222bd8/img" width="100%" alt="">
           </div>
           <div class="bg-yellow py-2 px-3">
             <span class="badge bg-white text-yellow">電影娛樂</span>
@@ -408,7 +408,7 @@
         </div>
         <div class="slide-4 mx-2">
           <div>
-            <img src="https://prod-vote-image.nownews.com/question_img/4028818a7554ab980175ab2a4c397d5f/img" width="100%" alt="">
+            <img src="*********/question_img/4028818a7554ab980175ab2a4c397d5f/img" width="100%" alt="">
           </div>
           <div class="bg-yellow py-2 px-3">
             <span class="badge bg-white text-yellow">電影娛樂</span>
@@ -417,7 +417,7 @@
         </div>
         <div class="slide-5 mx-2">
           <div>
-            <img src="https://prod-vote-image.nownews.com/question_img/4028818a7554ab980175ad35ba732c9a/img" width="100%" alt="">
+            <img src="*********/question_img/4028818a7554ab980175ad35ba732c9a/img" width="100%" alt="">
           </div>
           <div class="bg-yellow py-2 px-3">
             <span class="badge bg-white text-yellow">電影娛樂</span>

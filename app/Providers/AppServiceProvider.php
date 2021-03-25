@@ -39,9 +39,9 @@ class AppServiceProvider extends ServiceProvider
             $this->DB = new indexModel();
             $nav = $this->DB->get_nav();
             // yes代表需要有PK題
-            $being_vote =  $this->DB->get_being_vote('carousel', 0, '', '', 'yes');
+            $being_********* =  $this->DB->get_being_*********('carousel', 0, '', '', 'yes');
             $view->with('nav', $nav)
-                    ->with('being_vote', $being_vote);
+                    ->with('being_*********', $being_*********);
         });
     }
 }

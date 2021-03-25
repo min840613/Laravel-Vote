@@ -698,7 +698,7 @@ header {
 
 /* recommended */
 
-/*  popular vote */
+/*  popular ********* */
 .carousel-arrows {
   position: absolute;
   top: 50%;
@@ -820,7 +820,7 @@ header {
     bottom: 0.7em;
   }
 }
-/*  popular vote */
+/*  popular ********* */
 
 .slick-dots {
   bottom: -2.3rem;

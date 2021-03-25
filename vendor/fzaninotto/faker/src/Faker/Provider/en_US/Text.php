@@ -1757,7 +1757,7 @@ and we've no time to wash the things between whiles.'
 to ask.
 
 'Suppose we change the subject,' the March Hare interrupted, yawning.
-'I'm getting tired of this. I vote the young lady tells us a story.'
+'I'm getting tired of this. I ********* the young lady tells us a story.'
 
 'I'm afraid I don't know one,' said Alice, rather alarmed at the
 proposal.

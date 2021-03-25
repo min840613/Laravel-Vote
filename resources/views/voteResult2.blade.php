@@ -68,7 +68,7 @@
   }
 
   .progress-container::after {
-    content: attr(data-vote) '票';
+    content: attr(data-*********) '票';
     display: inline-block;
     position: absolute;
     right: 1.5rem;
@@ -137,23 +137,23 @@
   <div class="card mb-5" style='margin-bottom: 1.7rem!important;'>
     <div class="row no-gutters">
       <div class="col-12 col-lg">
-        <img src="{{$voteResult['question']->img}}" class="card-img" alt="...">
+        <img src="{{$*********Result['question']->img}}" class="card-img" alt="...">
       </div>
       <div class="col-12 col-lg bg-yellow">
         <div class="card-body">
-          <h3 class="card-title text-white">{{str_replace('18禁', '', str_replace('PK', '', $voteResult['question']->title))}}</h3>
+          <h3 class="card-title text-white">{{str_replace('18禁', '', str_replace('PK', '', $*********Result['question']->title))}}</h3>
           <p class="card-text">
-          <small class="text-muted">調查期間：{{$voteResult['question']->question_date_s}}~{{$voteResult['question']->question_date_e}}</small>
+          <small class="text-muted">調查期間：{{$*********Result['question']->question_date_s}}~{{$*********Result['question']->question_date_e}}</small>
           </p>
           <hr />
-          <p class="card-text" style='word-break: break-word;'>{{$voteResult['question']->desc_}}</p>
+          <p class="card-text" style='word-break: break-word;'>{{$*********Result['question']->desc_}}</p>
         </div>
       </div>
     </div>
   </div>
   <div class="text-secondary py-5" style='padding-top: 0rem!important;' id="survey">
     <!-- 文字 -->
-    @foreach($voteResult['sub_question'] as $key => $value)
+    @foreach($*********Result['sub_question'] as $key => $value)
       @if(strpos($value['t1']->title, '個資') !== false)
       @else
       <div class="form-group" style='padding-top: .4rem'>
@@ -169,7 +169,7 @@
                   <div class="col-7 col-sm-9 d-flex flex-column">
                   <span>{{$v->name}}</span>
                   <div class="row align-items-center">
-                    <div class="col progress-container" data-vote="{{$v->t2_count}}" data-percent="{{round(($v->t2_count/$value['t1']->t1_count)*100)}}">
+                    <div class="col progress-container" data-*********="{{$v->t2_count}}" data-percent="{{round(($v->t2_count/$value['t1']->t1_count)*100)}}">
                       <div class="progress">
                         <div class="progress-bar bg-yellow" role="progressbar" style="width: {{round(($v->t2_count/$value['t1']->t1_count)*100)}}%" aria-valuenow="{{round(($v->t2_count/$value['t1']->t1_count)*100)}}" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
@@ -185,7 +185,7 @@
               <div class="col-12 d-flex flex-column">
                 <span>{{$v->name}}</span>
                 <div class="row align-items-center">
-                  <div class="col-12 col-sm-11 progress-container" data-vote="{{$v->t2_count}}" data-percent="{{round(($v->t2_count/$value['t1']->t1_count)*100)}}">
+                  <div class="col-12 col-sm-11 progress-container" data-*********="{{$v->t2_count}}" data-percent="{{round(($v->t2_count/$value['t1']->t1_count)*100)}}">
                   
                     <div class="progress">
                       <div class="progress-bar bg-yellow" role="progressbar" style="width: {{round(($v->t2_count/$value['t1']->t1_count)*100)}}%" aria-valuenow="{{round(($v->t2_count/$value['t1']->t1_count)*100)}}" aria-valuemin="0" aria-valuemax="100"></div>
@@ -204,7 +204,7 @@
       @endif
     @endforeach
     
-    @if(!empty($voteResult['question']->gift && !empty($roster)))
+    @if(!empty($*********Result['question']->gift && !empty($roster)))
       <div class="position-relative mx-auto prizeSection">
         <div class="position-absolute text-center">
           <img class="section-icon mx-2" src="{{ asset('images/section-icon-04.svg') }}" alt="">
@@ -216,7 +216,7 @@
         <div class="d-flex flex-column mx-5 prizeList">
           
           <div class="d-flex flex-row">
-            <p class="mr-3 prize text-light-red">{{$voteResult['question']->gift}}</p>
+            <p class="mr-3 prize text-light-red">{{$*********Result['question']->gift}}</p>
             <p class="winners w-100 d-flex flex-row justify-content-center">
               @foreach ($roster as $value)
                 <span>{{$value}}</span>
@@ -232,9 +232,9 @@
       <button class="btn btn-theme bg-yellow gray-side text-white" style="min-width: 110px;" type="button" onclick="javascript: location.href = '{{url('/')}}'">回首頁</button>
     </div>
   </div>
-<div class="fb-comments" data-href="{{url('/voteResult')}}/{{$voteResult['question']->question_seq}}" data-numposts="5" data-width="100%"></div>
+<div class="fb-comments" data-href="{{url('/*********Result')}}/{{$*********Result['question']->question_seq}}" data-numposts="5" data-width="100%"></div>
 
-  @if ($being_vote->first())
+  @if ($being_*********->first())
     <section class="section">
       <div class="position-relative">
         <div class="d-flex flex-row align-items-center" style='margin-bottom: 1.5rem;'>
@@ -242,12 +242,12 @@
           <h2 class="section-title">火熱投票中</h2>
         </div>
         <div class="slider index-slider">
-          @foreach ($being_vote as $key => $value)
+          @foreach ($being_********* as $key => $value)
             <div class="slide-{{$key}} position-relative">
               <div class="carousel-mask">
                 <h2>{{str_replace('18禁', '', str_replace('PK', '', $value->title))}}</h2>
                 {{-- <span>火熱投票中</span> --}}
-                  <button class="btn btn-outline text-white" style="font-weight: bold;" onclick="javascript: location.href='{{url('/vote')}}/{{$value->question_seq}}';">查看完整內容</button>
+                  <button class="btn btn-outline text-white" style="font-weight: bold;" onclick="javascript: location.href='{{url('/*********')}}/{{$value->question_seq}}';">查看完整內容</button>
               </div>
               <img src="{{$value->img}}" width="100%" alt="">
             </div>
@@ -261,7 +261,7 @@
     </section>
     @endif
 
-    @if($interest_vote->first())
+    @if($interest_*********->first())
   <section class="section">
     <div class="section-header d-flex flex-row justify-content-between">
       <div class="d-flex flex-row align-items-center">
@@ -275,8 +275,8 @@
     </div>
     <div class="section-content position-relative">
       <div class="slider recommend-slider">
-        @foreach ($interest_vote as $key => $value)
-            <div class="slide-{{$key}} mx-2" onclick="javascript: location.href='{{url('/voteResult')}}/{{$value->question_seq}}';">
+        @foreach ($interest_********* as $key => $value)
+            <div class="slide-{{$key}} mx-2" onclick="javascript: location.href='{{url('/*********Result')}}/{{$value->question_seq}}';">
             <div>
               <img src="{{$value->img}}" width="100%" alt="">
             </div>
@@ -351,7 +351,7 @@
   // })
 </script>
 
-@if(strpos($voteResult['question']->title, '18禁') !== false)
+@if(strpos($*********Result['question']->title, '18禁') !== false)
   <script>
     $(document).ready(function(){
       $('#rated-modal').modal('show');

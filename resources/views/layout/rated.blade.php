@@ -11,7 +11,7 @@
         警告： 未滿十八歲不得觀賞瀏覽
       </p>
       <div class="col-12 col-md-4 align-self-center text-center warning-img">
-        <img src="https://prod-vote-image.nownews.com/images/rate-warning.png" alt="" width="100%">
+        <img src="*********/images/rate-warning.png" alt="" width="100%">
       </div>
       <div class="col-12 col-md-8 align-self-center">
         <div>

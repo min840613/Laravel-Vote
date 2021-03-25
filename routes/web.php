@@ -21,16 +21,16 @@ Route::get('/login', 'indexController@login');
 Route::get('/logout', 'indexController@logout');
 
 Route::get('/', 'indexController@index');
-Route::get('/voteType/{type_id}', 'indexController@get_voteType');
-Route::get('/vote/{id}', 'indexController@get_vote');
-Route::match(array('GET','POST'), '/insertVote/{id}/{login}', 'indexController@insert_Vote');
-Route::get('/voteResult/{id}', 'indexController@get_voteResult');
-Route::get('/preview/{id}', 'indexController@get_vote_preview')->middleware("cors");
+Route::get('/*********Type/{type_id}', 'indexController@get_*********Type');
+Route::get('/*********/{id}', 'indexController@get_*********');
+Route::match(array('GET','POST'), '/insert*********/{id}/{login}', 'indexController@insert_*********');
+Route::get('/*********Result/{id}', 'indexController@get_*********Result');
+Route::get('/preview/{id}', 'indexController@get_*********_preview')->middleware("cors");
 Route::get('/done/{id}/{login}', 'indexController@done');
 Route::get('/register', 'indexController@register');
 Route::get('/register/done', function(){
     return view('register_done')
-                            ->with('meta_title', 'NOWnews民調')
+                            ->with('meta_title', '*********民調')
                             ->with('meta_desc', '體察生活大小事，全民意見報你知！各式議題的民意調查，客觀呈現不同聲音與想法，蒐羅所有時下趨勢的意見報告，盡在NOW民調。');
 });
 Route::post('/insert_update_user', 'indexController@insert_update_user');
@@ -67,6 +67,6 @@ Route::get('/export_excel/{id}', 'indexController@export_excel')->middleware("co
 
 
 // for API
-Route::get('/api/answer/list', 'apiController@api_being_vote')->middleware("cors");
-Route::get('/api/votePK', 'apiController@api_being_pk_vote')->middleware("cors");
+Route::get('/api/answer/list', 'apiController@api_being_*********')->middleware("cors");
+Route::get('/api/*********PK', 'apiController@api_being_pk_*********')->middleware("cors");
 Route::get('/api/baseToJPG', 'apiController@api_baseToJPG')->middleware("cors");

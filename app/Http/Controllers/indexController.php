@@ -23,57 +23,57 @@ class indexController extends Controller
     {
         date_default_timezone_set('Asia/Taipei');
         $this->DB = new indexModel();
-        $this->meta_title = 'NOWnews民調';
+        $this->meta_title = '*********民調';
         $this->meta_desc = '體察生活大小事，全民意見報你知！各式議題的民意調查，客觀呈現不同聲音與想法，蒐羅所有時下趨勢的意見報告，盡在NOW民調。';
     }
 
     public function index()
     {
-        $being_vote = $this->DB->get_being_vote('carousel'); //首頁上方輪播
-        $pk_vote = $this->DB->get_pk_vote(); //首頁PK輪播
-        $limit_being_vote = $this->DB->get_being_vote('list'); //首頁火熱投票
-        $over_vote = $this->DB->get_over_vote('list', 3); //首頁已結束投票
-        $interest_vote = $this->DB->get_interest_vote(6);
-        return view('index')->with('being_vote', $being_vote)
-                            ->with('pk_vote', $pk_vote)
-                            ->with('limit_being_vote', $limit_being_vote)
-                            ->with('over_vote', $over_vote)
-                            ->with('interest_vote', $interest_vote)
+        $being_********* = $this->DB->get_being_*********('carousel'); //首頁上方輪播
+        $pk_********* = $this->DB->get_pk_*********(); //首頁PK輪播
+        $limit_being_********* = $this->DB->get_being_*********('list'); //首頁火熱投票
+        $over_********* = $this->DB->get_over_*********('list', 3); //首頁已結束投票
+        $interest_********* = $this->DB->get_interest_*********(6);
+        return view('index')->with('being_*********', $being_*********)
+                            ->with('pk_*********', $pk_*********)
+                            ->with('limit_being_*********', $limit_being_*********)
+                            ->with('over_*********', $over_*********)
+                            ->with('interest_*********', $interest_*********)
                             ->with('meta_title', $this->meta_title)
                             ->with('meta_desc', $this->meta_desc);
     }
 
-    public function get_voteType($type_id, Request $request){
+    public function get_*********Type($type_id, Request $request){
         $og_keywords = '';
-        if($type_id == 'being_vote'){ //火熱投票中
+        if($type_id == 'being_*********'){ //火熱投票中
             $type_code = '';
             $type_name = '火熱投票中';
-            $pk_vote = $this->DB->get_pk_vote();
-            $being_vote = $this->DB->get_being_vote('list');
-            $over_vote = $this->DB->get_over_vote('pagination', 0, $type_id);
+            $pk_********* = $this->DB->get_pk_*********();
+            $being_********* = $this->DB->get_being_*********('list');
+            $over_********* = $this->DB->get_over_*********('pagination', 0, $type_id);
 
-        }else if($type_id == 'over_vote'){ //PK投票
+        }else if($type_id == 'over_*********'){ //PK投票
             $type_code = '';
             $type_name = '已結束投票';
-            $pk_vote = $this->DB->get_pk_vote($type_id);
-            $being_vote = $this->DB->get_being_vote('list', 0, $type_id);
-            $over_vote = $this->DB->get_over_vote('pagination', 0);
+            $pk_********* = $this->DB->get_pk_*********($type_id);
+            $being_********* = $this->DB->get_being_*********('list', 0, $type_id);
+            $over_********* = $this->DB->get_over_*********('pagination', 0);
         }else if($type_id == 'search'){
             $type_code = 'search';
             $type_name = '搜尋';
             $keyword = $request->input('keyword');
-            $pk_vote = $this->DB->get_pk_vote('', $keyword);
-            $being_vote = $this->DB->get_being_vote('list', 0, '', $keyword);
-            $over_vote = $this->DB->get_over_vote('pagination', 0, '', $keyword);
+            $pk_********* = $this->DB->get_pk_*********('', $keyword);
+            $being_********* = $this->DB->get_being_*********('list', 0, '', $keyword);
+            $over_********* = $this->DB->get_over_*********('pagination', 0, '', $keyword);
 
         }else{
             $type = $this->DB->get_nav($type_id);
             $type_code = $type->code;
             $type_name = $type->name;
-            $pk_vote = $this->DB->get_pk_vote($type_id);
-            $being_vote = $this->DB->get_being_vote('list', 0, $type_id);
-            $over_vote = $this->DB->get_over_vote('pagination', 0, $type_id);
-            $og_keywords = $type_name.',NOWnews民調,NOWnews,今日新聞,網路投票,線上投票';
+            $pk_********* = $this->DB->get_pk_*********($type_id);
+            $being_********* = $this->DB->get_being_*********('list', 0, $type_id);
+            $over_********* = $this->DB->get_over_*********('pagination', 0, $type_id);
+            $og_keywords = $type_name.',*********民調,*********,今日新聞,網路投票,線上投票';
         }
 
         $request_page = 1;
@@ -81,73 +81,73 @@ class indexController extends Controller
             $request_page = $request->input('page');
         }
 
-        $this->meta_title = $type_name.'(第'.$request_page.'頁) | NOWnews民調';
+        $this->meta_title = $type_name.'(第'.$request_page.'頁) | *********民調';
 
         if($type_name == '政治'){
-            $this->meta_desc ='【NOWnews民調 | '.$type_name.'(第'.$request_page.'頁) 】跟緊政治時事，探討網民最真實的感受。';
+            $this->meta_desc ='【*********民調 | '.$type_name.'(第'.$request_page.'頁) 】跟緊政治時事，探討網民最真實的感受。';
         }
         if($type_name == '生活'){
-            $this->meta_desc ='【NOWnews民調 | '.$type_name.'(第'.$request_page.'頁) 】體察生活大小事，傾聽全民的聲音。';
+            $this->meta_desc ='【*********民調 | '.$type_name.'(第'.$request_page.'頁) 】體察生活大小事，傾聽全民的聲音。';
         }
         if($type_name == '電影娛樂'){
-            $this->meta_desc ='【NOWnews民調 | '.$type_name.'(第'.$request_page.'頁) 】最熱門、最有趣！顛覆傳統民調，都在NOW民調。';
+            $this->meta_desc ='【*********民調 | '.$type_name.'(第'.$request_page.'頁) 】最熱門、最有趣！顛覆傳統民調，都在NOW民調。';
         }
         if($type_name == '話題新聞'){
-            $this->meta_desc ='【NOWnews民調 | '.$type_name.'(第'.$request_page.'頁) 】隨時更新時下最熱門話題，邀請網民一起表達最忠實的意見。';
+            $this->meta_desc ='【*********民調 | '.$type_name.'(第'.$request_page.'頁) 】隨時更新時下最熱門話題，邀請網民一起表達最忠實的意見。';
         }
         
         return view('category')->with('type_code', $type_code)
                                 ->with('type_name', $type_name)
-                                ->with('pk_vote', $pk_vote)
-                                ->with('being_vote', $being_vote)
-                                ->with('over_vote', $over_vote)
+                                ->with('pk_*********', $pk_*********)
+                                ->with('being_*********', $being_*********)
+                                ->with('over_*********', $over_*********)
                                 ->with('meta_title', $this->meta_title)
                                 ->with('meta_desc', $this->meta_desc)
                                 ->with('og_keywords', $og_keywords);
     }
 
-    public function get_voteResult($id){
-        $voteResult =  $this->DB->get_voteResult($id);
-        $being_vote = $this->DB->get_being_vote('carousel', '', '', '', 'yes'); //首頁上方輪播
-        $interest_vote = $this->DB->get_interest_vote(6);
-        // $pk_vote = $this->DB->get_pk_vote(); //首頁PK輪播
+    public function get_*********Result($id){
+        $*********Result =  $this->DB->get_*********Result($id);
+        $being_********* = $this->DB->get_being_*********('carousel', '', '', '', 'yes'); //首頁上方輪播
+        $interest_********* = $this->DB->get_interest_*********(6);
+        // $pk_********* = $this->DB->get_pk_*********(); //首頁PK輪播
         $roster = '';
 
         $og_image_height = 536;
 
-        if(!empty($voteResult)){
-            // if($voteResult[0]['q_login'] == 'Y' && !Session::has('email')){
+        if(!empty($*********Result)){
+            // if($*********Result[0]['q_login'] == 'Y' && !Session::has('email')){
             //     echo "<script>location.href = '".url('/login')."'</script>";
             // }else{
-                if(strpos($voteResult[0]['q_title'], 'PK') !== false){
+                if(strpos($*********Result[0]['q_title'], 'PK') !== false){
                     // PK投票結果
-                    $has_vote = false;
-                    if($voteResult[0]['q_login'] == 'Y' && Session::has('email')){
+                    $has_********* = false;
+                    if($*********Result[0]['q_login'] == 'Y' && Session::has('email')){
                         $has_answer = $this->DB->has_answer($id, Session::get('user_name'));
                         if($has_answer->first()){
-                            $has_vote = true;
+                            $has_********* = true;
                         }
                     }
-                    $vote_command1 = $this->DB->get_vote_command($voteResult[0]['all'][0]->t1_topic01_seq, $voteResult[0]['all'][0]->t2_topic02_seq);
-                    $vote_command2 = $this->DB->get_vote_command($voteResult[0]['all'][1]->t1_topic01_seq, $voteResult[0]['all'][1]->t2_topic02_seq);
-                    // var_dump($vote_command1);
+                    $*********_command1 = $this->DB->get_*********_command($*********Result[0]['all'][0]->t1_topic01_seq, $*********Result[0]['all'][0]->t2_topic02_seq);
+                    $*********_command2 = $this->DB->get_*********_command($*********Result[0]['all'][1]->t1_topic01_seq, $*********Result[0]['all'][1]->t2_topic02_seq);
+                    // var_dump($*********_command1);
                     // die();
-                    $this->meta_title = str_replace('18禁', '', str_replace('PK', '', $voteResult[0]['q_title'])).' | 投票結果 | NOWnews民調';
-                    $this->meta_desc = $voteResult[0]['q_desc'];
+                    $this->meta_title = str_replace('18禁', '', str_replace('PK', '', $*********Result[0]['q_title'])).' | 投票結果 | *********民調';
+                    $this->meta_desc = $*********Result[0]['q_desc'];
                     
                     $og_image_height = 536;
-                    $og_image = $voteResult[0]['q_img'];
-                    $type_name = $this->DB->get_one_type($voteResult[0]['q_question_type']);
+                    $og_image = $*********Result[0]['q_img'];
+                    $type_name = $this->DB->get_one_type($*********Result[0]['q_question_type']);
                     $type_name = $type_name->name;
-                    $type_key = $voteResult[0]['q_question_type'];
-                    return view('pk')->with('vote', $voteResult)
-                                    // ->with('pk_vote', $pk_vote)
-                                    ->with('vote_command1', $vote_command1)
-                                    ->with('vote_command2', $vote_command2)
-                                    ->with('being_vote', $being_vote)
-                                    ->with('interest_vote', $interest_vote)
+                    $type_key = $*********Result[0]['q_question_type'];
+                    return view('pk')->with('*********', $*********Result)
+                                    // ->with('pk_*********', $pk_*********)
+                                    ->with('*********_command1', $*********_command1)
+                                    ->with('*********_command2', $*********_command2)
+                                    ->with('being_*********', $being_*********)
+                                    ->with('interest_*********', $interest_*********)
                                     ->with('question_id', $id)
-                                    ->with('has_vote', $has_vote)
+                                    ->with('has_*********', $has_*********)
                                     ->with('meta_title', $this->meta_title)
                                     ->with('meta_desc', $this->meta_desc)
                                     ->with('og_image_height', $og_image_height)
@@ -156,21 +156,21 @@ class indexController extends Controller
                                     ->with('type_key', $type_key);
                 }else{
                     // 一般投票結果
-                    if(!empty($voteResult[0]['q_roster'])){
-                        $roster = explode('-', $voteResult[0]['q_roster']);
+                    if(!empty($*********Result[0]['q_roster'])){
+                        $roster = explode('-', $*********Result[0]['q_roster']);
                     }
-                    // dd($voteResult);
-                    $this->meta_title = str_replace('18禁', '', str_replace('PK', '', $voteResult[0]['q_title'])).' | 投票結果 | NOWnews民調';
-                    $this->meta_desc = $voteResult[0]['q_desc'];
-                    $og_image = $voteResult[0]['q_img'];
-                    $type_name = $this->DB->get_one_type($voteResult[0]['q_question_type']);
+                    // dd($*********Result);
+                    $this->meta_title = str_replace('18禁', '', str_replace('PK', '', $*********Result[0]['q_title'])).' | 投票結果 | *********民調';
+                    $this->meta_desc = $*********Result[0]['q_desc'];
+                    $og_image = $*********Result[0]['q_img'];
+                    $type_name = $this->DB->get_one_type($*********Result[0]['q_question_type']);
                     $type_name = $type_name->name;
-                    $type_key = $voteResult[0]['q_question_type'];
-                    return view('voteResult')->with('voteResult', $voteResult)
+                    $type_key = $*********Result[0]['q_question_type'];
+                    return view('*********Result')->with('*********Result', $*********Result)
                                             ->with('roster', $roster)
-                                            ->with('being_vote', $being_vote)
-                                            ->with('interest_vote', $interest_vote)
-                                            // ->with('pk_vote', $pk_vote)
+                                            ->with('being_*********', $being_*********)
+                                            ->with('interest_*********', $interest_*********)
+                                            // ->with('pk_*********', $pk_*********)
                                             ->with('question_id', $id)
                                             ->with('meta_title', $this->meta_title)
                                             ->with('meta_desc', $this->meta_desc)
@@ -187,48 +187,48 @@ class indexController extends Controller
         }
     }
 
-    public function get_voteResult_preview($id){
-        $voteResult =  $this->DB->get_voteResult($id, 'no');
-        $being_vote = $this->DB->get_being_vote('carousel', '', '', '', 'yes'); //首頁上方輪播
-        $interest_vote = $this->DB->get_interest_vote(6);
+    public function get_*********Result_preview($id){
+        $*********Result =  $this->DB->get_*********Result($id, 'no');
+        $being_********* = $this->DB->get_being_*********('carousel', '', '', '', 'yes'); //首頁上方輪播
+        $interest_********* = $this->DB->get_interest_*********(6);
         $roster = '';
 
         $og_image_height = 536;
 
-        if(!empty($voteResult)){
-            // if($voteResult[0]['q_login'] == 'Y' && !Session::has('email')){
+        if(!empty($*********Result)){
+            // if($*********Result[0]['q_login'] == 'Y' && !Session::has('email')){
             //     echo "<script>location.href = '".url('/login')."'</script>";
             // }else{
-                if(strpos($voteResult[0]['q_title'], 'PK') !== false){
+                if(strpos($*********Result[0]['q_title'], 'PK') !== false){
                     // PK投票結果
-                    $has_vote = false;
-                    if($voteResult[0]['q_login'] == 'Y' && Session::has('email')){
+                    $has_********* = false;
+                    if($*********Result[0]['q_login'] == 'Y' && Session::has('email')){
                         $has_answer = $this->DB->has_answer($id, Session::get('user_name'));
                         if($has_answer->first()){
-                            $has_vote = true;
+                            $has_********* = true;
                         }
                     }
-                    $vote_command1 = $this->DB->get_vote_command($voteResult[0]['all'][0]->t1_topic01_seq, $voteResult[0]['all'][0]->t2_topic02_seq);
-                    $vote_command2 = $this->DB->get_vote_command($voteResult[0]['all'][1]->t1_topic01_seq, $voteResult[0]['all'][1]->t2_topic02_seq);
+                    $*********_command1 = $this->DB->get_*********_command($*********Result[0]['all'][0]->t1_topic01_seq, $*********Result[0]['all'][0]->t2_topic02_seq);
+                    $*********_command2 = $this->DB->get_*********_command($*********Result[0]['all'][1]->t1_topic01_seq, $*********Result[0]['all'][1]->t2_topic02_seq);
                     
                     
-                    $this->meta_title = str_replace('18禁', '', str_replace('PK', '', $voteResult[0]['q_title'])).' | 投票結果 | NOWnews民調';
-                    $this->meta_desc = $voteResult[0]['q_desc'];
+                    $this->meta_title = str_replace('18禁', '', str_replace('PK', '', $*********Result[0]['q_title'])).' | 投票結果 | *********民調';
+                    $this->meta_desc = $*********Result[0]['q_desc'];
                     
                     // $og_image_height = 536;
-                    $og_image = $voteResult[0]['q_img'];
-                    $type_name = $this->DB->get_one_type($voteResult[0]['q_question_type']);
+                    $og_image = $*********Result[0]['q_img'];
+                    $type_name = $this->DB->get_one_type($*********Result[0]['q_question_type']);
                     $type_name = $type_name->name;
-                    $type_key = $voteResult[0]['q_question_type'];
+                    $type_key = $*********Result[0]['q_question_type'];
                     
-                    return view('pk')->with('vote', $voteResult)
-                                    // ->with('pk_vote', $pk_vote)
-                                    ->with('vote_command1', $vote_command1)
-                                    ->with('vote_command2', $vote_command2)
-                                    ->with('being_vote', $being_vote)
-                                    ->with('interest_vote', $interest_vote)
+                    return view('pk')->with('*********', $*********Result)
+                                    // ->with('pk_*********', $pk_*********)
+                                    ->with('*********_command1', $*********_command1)
+                                    ->with('*********_command2', $*********_command2)
+                                    ->with('being_*********', $being_*********)
+                                    ->with('interest_*********', $interest_*********)
                                     ->with('question_id', $id)
-                                    ->with('has_vote', $has_vote)
+                                    ->with('has_*********', $has_*********)
                                     ->with('meta_title', $this->meta_title)
                                     ->with('meta_desc', $this->meta_desc)
                                     ->with('og_image_height', $og_image_height)
@@ -237,21 +237,21 @@ class indexController extends Controller
                                     ->with('type_key', $type_key);
                 }else{
                     // 一般投票結果
-                    if(!empty($voteResult[0]['q_roster'])){
-                        $roster = explode('-', $voteResult[0]['q_roster']);
+                    if(!empty($*********Result[0]['q_roster'])){
+                        $roster = explode('-', $*********Result[0]['q_roster']);
                     }
-                    $this->meta_title = str_replace('18禁', '', str_replace('PK', '', $voteResult[0]['q_title'])).' | 投票結果 | NOWnews民調';
-                    $this->meta_desc = $voteResult[0]['q_desc'];
-                    $og_image = $voteResult[0]['q_img'];
-                    $type_name = $this->DB->get_one_type($voteResult[0]['q_question_type']);
+                    $this->meta_title = str_replace('18禁', '', str_replace('PK', '', $*********Result[0]['q_title'])).' | 投票結果 | *********民調';
+                    $this->meta_desc = $*********Result[0]['q_desc'];
+                    $og_image = $*********Result[0]['q_img'];
+                    $type_name = $this->DB->get_one_type($*********Result[0]['q_question_type']);
                     $type_name = $type_name->name;
-                    $type_key = $voteResult[0]['q_question_type'];
+                    $type_key = $*********Result[0]['q_question_type'];
 
-                    return view('voteResult')->with('voteResult', $voteResult)
+                    return view('*********Result')->with('*********Result', $*********Result)
                                             ->with('roster', $roster)
-                                            ->with('being_vote', $being_vote)
-                                            ->with('interest_vote', $interest_vote)
-                                            // ->with('pk_vote', $pk_vote)
+                                            ->with('being_*********', $being_*********)
+                                            ->with('interest_*********', $interest_*********)
+                                            // ->with('pk_*********', $pk_*********)
                                             ->with('question_id', $id)
                                             ->with('meta_title', $this->meta_title)
                                             ->with('meta_desc', $this->meta_desc)
@@ -268,48 +268,48 @@ class indexController extends Controller
         }
     }
 
-    public function get_vote_preview($id){
+    public function get_*********_preview($id){
 
-        $vote = $this->DB->get_vote($id, 'no');
+        $********* = $this->DB->get_*********($id, 'no');
         
-        $being_vote = $this->DB->get_being_vote('carousel', '', '', '', 'yes'); //首頁上方輪播
-        $interest_vote = $this->DB->get_interest_vote(6);
-        // $pk_vote = $this->DB->get_pk_vote(); //首頁PK輪播
+        $being_********* = $this->DB->get_being_*********('carousel', '', '', '', 'yes'); //首頁上方輪播
+        $interest_********* = $this->DB->get_interest_*********(6);
+        // $pk_********* = $this->DB->get_pk_*********(); //首頁PK輪播
         $og_image_height = 536;
 
-        if(!empty($vote)){
-            if($vote[0]['q_login'] == 'Y' && !Session::has('email')){
+        if(!empty($*********)){
+            if($*********[0]['q_login'] == 'Y' && !Session::has('email')){
                 echo "<script>location.href = '".url('/login')."'</script>";
             }else{
-                $has_vote = false;
-                if($vote[0]['q_login'] == 'Y' && Session::has('email')){
+                $has_********* = false;
+                if($*********[0]['q_login'] == 'Y' && Session::has('email')){
                     $has_answer = $this->DB->has_answer($id, Session::get('user_name'));
                     if($has_answer->first()){
-                        $has_vote = true;
-                        echo "<script>location.href = '".url('/voteResult')."/".$id."'</script>";
+                        $has_********* = true;
+                        echo "<script>location.href = '".url('/*********Result')."/".$id."'</script>";
                         die();
                     }
                 }
 
-                if(strpos($vote[0]['q_title'], 'PK') !== false){
+                if(strpos($*********[0]['q_title'], 'PK') !== false){
                     // PK投票結果
-                    $vote = $this->DB->get_voteResult($id, 'no');
-                    $vote_command1 = $this->DB->get_vote_command($vote[0]['all'][0]->t1_topic01_seq, $vote[0]['all'][0]->t2_topic02_seq);
-                    $vote_command2 = $this->DB->get_vote_command($vote[0]['all'][1]->t1_topic01_seq, $vote[0]['all'][1]->t2_topic02_seq);
-                    $this->meta_title = str_replace('18禁', '', str_replace('PK', '', $vote[0]['q_title'])).' | NOWnews民調';
-                    $this->meta_desc = $vote[0]['q_desc'];
-                    $og_image = $vote[0]['q_img'];
-                    $type_name = $this->DB->get_one_type($vote[0]['q_question_type']);
+                    $********* = $this->DB->get_*********Result($id, 'no');
+                    $*********_command1 = $this->DB->get_*********_command($*********[0]['all'][0]->t1_topic01_seq, $*********[0]['all'][0]->t2_topic02_seq);
+                    $*********_command2 = $this->DB->get_*********_command($*********[0]['all'][1]->t1_topic01_seq, $*********[0]['all'][1]->t2_topic02_seq);
+                    $this->meta_title = str_replace('18禁', '', str_replace('PK', '', $*********[0]['q_title'])).' | *********民調';
+                    $this->meta_desc = $*********[0]['q_desc'];
+                    $og_image = $*********[0]['q_img'];
+                    $type_name = $this->DB->get_one_type($*********[0]['q_question_type']);
                     $type_name = $type_name->name;
-                    $type_key = $vote[0]['q_question_type'];
-                    return view('pk')->with('vote', $vote)
-                                    ->with('vote_command1', $vote_command1)
-                                    ->with('vote_command2', $vote_command2)
-                                    ->with('being_vote', $being_vote)
-                                    ->with('interest_vote', $interest_vote)
-                                    // ->with('pk_vote', $pk_vote)
+                    $type_key = $*********[0]['q_question_type'];
+                    return view('pk')->with('*********', $*********)
+                                    ->with('*********_command1', $*********_command1)
+                                    ->with('*********_command2', $*********_command2)
+                                    ->with('being_*********', $being_*********)
+                                    ->with('interest_*********', $interest_*********)
+                                    // ->with('pk_*********', $pk_*********)
                                     ->with('question_id', $id)
-                                    ->with('has_vote', $has_vote)
+                                    ->with('has_*********', $has_*********)
                                     ->with('meta_title', $this->meta_title)
                                     ->with('meta_desc', $this->meta_desc)
                                     ->with('og_image_height', $og_image_height)
@@ -318,16 +318,16 @@ class indexController extends Controller
                                     ->with('type_key', $type_key);
                 }else{
                     // 一般投票結果
-                    $this->meta_title = str_replace('18禁', '', str_replace('PK', '', $vote[0]['q_title'])).' | NOWnews民調';
-                    $this->meta_desc = $vote[0]['q_desc'];
-                    $og_image = $vote[0]['q_img'];
-                    $type_name = $this->DB->get_one_type($vote[0]['q_question_type']);
+                    $this->meta_title = str_replace('18禁', '', str_replace('PK', '', $*********[0]['q_title'])).' | *********民調';
+                    $this->meta_desc = $*********[0]['q_desc'];
+                    $og_image = $*********[0]['q_img'];
+                    $type_name = $this->DB->get_one_type($*********[0]['q_question_type']);
                     $type_name = $type_name->name;
-                    $type_key = $vote[0]['q_question_type'];
-                    return view('vote')->with('vote', $vote)
-                                        ->with('being_vote', $being_vote)
-                                        ->with('interest_vote', $interest_vote)
-                                        // ->with('pk_vote', $pk_vote)
+                    $type_key = $*********[0]['q_question_type'];
+                    return view('*********')->with('*********', $*********)
+                                        ->with('being_*********', $being_*********)
+                                        ->with('interest_*********', $interest_*********)
+                                        // ->with('pk_*********', $pk_*********)
                                         ->with('question_id', $id)
                                         ->with('meta_title', $this->meta_title)
                                         ->with('meta_desc', $this->meta_desc)
@@ -339,53 +339,53 @@ class indexController extends Controller
             }
         }else{
             // echo "<script>alert('此投票已過期！')</script>";
-            echo "<script>location.href = '".url('/voteResult').'/'.$id."'</script>";
+            echo "<script>location.href = '".url('/*********Result').'/'.$id."'</script>";
         }
     }
 
-    public function get_vote($id){
+    public function get_*********($id){
 
-        $vote = $this->DB->get_vote($id);
+        $********* = $this->DB->get_*********($id);
         
-        $being_vote = $this->DB->get_being_vote('carousel', '', '', '', 'yes'); //首頁上方輪播
-        $interest_vote = $this->DB->get_interest_vote(6);
-        // $pk_vote = $this->DB->get_pk_vote(); //首頁PK輪播
+        $being_********* = $this->DB->get_being_*********('carousel', '', '', '', 'yes'); //首頁上方輪播
+        $interest_********* = $this->DB->get_interest_*********(6);
+        // $pk_********* = $this->DB->get_pk_*********(); //首頁PK輪播
 
         $og_image_height = 536;
         
-        if(!empty($vote)){
-            if($vote[0]['q_login'] == 'Y' && !Session::has('email')){
+        if(!empty($*********)){
+            if($*********[0]['q_login'] == 'Y' && !Session::has('email')){
                 echo "<script>location.href = '".url('/login')."'</script>";
             }else{
-                $has_vote = false;
-                if($vote[0]['q_login'] == 'Y' && Session::has('email')){
+                $has_********* = false;
+                if($*********[0]['q_login'] == 'Y' && Session::has('email')){
                     $has_answer = $this->DB->has_answer($id, Session::get('user_name'));
                     if($has_answer->first()){
-                        $has_vote = true;
-                        echo "<script>location.href = '".url('/voteResult')."/".$id."'</script>";
+                        $has_********* = true;
+                        echo "<script>location.href = '".url('/*********Result')."/".$id."'</script>";
                         die();
                     }
                 }
 
-                if(strpos($vote[0]['q_title'], 'PK') !== false){
+                if(strpos($*********[0]['q_title'], 'PK') !== false){
                     // PK投票結果
-                    $vote = $this->DB->get_voteResult($id);
-                    $vote_command1 = $this->DB->get_vote_command($vote[0]['all'][0]->t1_topic01_seq, $vote[0]['all'][0]->t2_topic02_seq);
-                    $vote_command2 = $this->DB->get_vote_command($vote[0]['all'][1]->t1_topic01_seq, $vote[0]['all'][1]->t2_topic02_seq);
-                    $this->meta_title = str_replace('18禁', '', str_replace('PK', '', $vote[0]['q_title'])).' | NOWnews民調';
-                    $this->meta_desc = $vote[0]['q_desc'];
-                    $og_image = $vote[0]['q_img'];
-                    $type_name = $this->DB->get_one_type($vote[0]['q_question_type']);
+                    $********* = $this->DB->get_*********Result($id);
+                    $*********_command1 = $this->DB->get_*********_command($*********[0]['all'][0]->t1_topic01_seq, $*********[0]['all'][0]->t2_topic02_seq);
+                    $*********_command2 = $this->DB->get_*********_command($*********[0]['all'][1]->t1_topic01_seq, $*********[0]['all'][1]->t2_topic02_seq);
+                    $this->meta_title = str_replace('18禁', '', str_replace('PK', '', $*********[0]['q_title'])).' | *********民調';
+                    $this->meta_desc = $*********[0]['q_desc'];
+                    $og_image = $*********[0]['q_img'];
+                    $type_name = $this->DB->get_one_type($*********[0]['q_question_type']);
                     $type_name = $type_name->name;
-                    $type_key = $vote[0]['q_question_type'];
-                    return view('pk')->with('vote', $vote)
-                                    ->with('vote_command1', $vote_command1)
-                                    ->with('vote_command2', $vote_command2)
-                                    ->with('being_vote', $being_vote)
-                                    ->with('interest_vote', $interest_vote)
-                                    // ->with('pk_vote', $pk_vote)
+                    $type_key = $*********[0]['q_question_type'];
+                    return view('pk')->with('*********', $*********)
+                                    ->with('*********_command1', $*********_command1)
+                                    ->with('*********_command2', $*********_command2)
+                                    ->with('being_*********', $being_*********)
+                                    ->with('interest_*********', $interest_*********)
+                                    // ->with('pk_*********', $pk_*********)
                                     ->with('question_id', $id)
-                                    ->with('has_vote', $has_vote)
+                                    ->with('has_*********', $has_*********)
                                     ->with('meta_title', $this->meta_title)
                                     ->with('meta_desc', $this->meta_desc)
                                     ->with('og_image_height', $og_image_height)
@@ -394,16 +394,16 @@ class indexController extends Controller
                                     ->with('type_key', $type_key);
                 }else{
                     // 一般投票結果
-                    $this->meta_title = str_replace('18禁', '', str_replace('PK', '', $vote[0]['q_title'])).' | NOWnews民調';
-                    $this->meta_desc = $vote[0]['q_desc'];
-                    $og_image = $vote[0]['q_img'];
-                    $type_name = $this->DB->get_one_type($vote[0]['q_question_type']);
+                    $this->meta_title = str_replace('18禁', '', str_replace('PK', '', $*********[0]['q_title'])).' | *********民調';
+                    $this->meta_desc = $*********[0]['q_desc'];
+                    $og_image = $*********[0]['q_img'];
+                    $type_name = $this->DB->get_one_type($*********[0]['q_question_type']);
                     $type_name = $type_name->name;
-                    $type_key = $vote[0]['q_question_type'];
-                    return view('vote')->with('vote', $vote)
-                                        ->with('being_vote', $being_vote)
-                                        ->with('interest_vote', $interest_vote)
-                                        // ->with('pk_vote', $pk_vote)
+                    $type_key = $*********[0]['q_question_type'];
+                    return view('*********')->with('*********', $*********)
+                                        ->with('being_*********', $being_*********)
+                                        ->with('interest_*********', $interest_*********)
+                                        // ->with('pk_*********', $pk_*********)
                                         ->with('question_id', $id)
                                         ->with('meta_title', $this->meta_title)
                                         ->with('meta_desc', $this->meta_desc)
@@ -415,19 +415,19 @@ class indexController extends Controller
             }
         }else{
             // echo "<script>alert('此投票已過期！')</script>";
-            echo "<script>location.href = '".url('/voteResult').'/'.$id."'</script>";
+            echo "<script>location.href = '".url('/*********Result').'/'.$id."'</script>";
         }
     }
 
     public function ajax_comment($topic1, $topic2, $page){
-        $result = $this->DB->get_vote_command($topic1, $topic2, $page);
+        $result = $this->DB->get_*********_command($topic1, $topic2, $page);
         return $result;
     }
     // $uuid = Str::uuid()->toString();
-    public function insert_Vote($id, $login, Request $request){
+    public function insert_*********($id, $login, Request $request){
         // dd($request->form_answer);
         if(!$request->isMethod('post')){
-            echo "<script>location.href = '".url('/vote').'/'.$id."'</script>";
+            echo "<script>location.href = '".url('/*********').'/'.$id."'</script>";
             die();
         }
 
@@ -495,15 +495,15 @@ class indexController extends Controller
                 if($login == 'Y'){
                     echo "<script>location.href = '".url('/done')."/".$id."/".$login."'</script>";
                 }else{
-                    echo "<script>location.href = '".url('/voteResult')."/".$id."'</script>";
+                    echo "<script>location.href = '".url('/*********Result')."/".$id."'</script>";
                 }
                 
             }else{
                 // echo "<script>alert('投票失敗');</script>";
-                echo "<script>location.href = '".url('/vote')."/".$id."'</script>";
+                echo "<script>location.href = '".url('/*********')."/".$id."'</script>";
             }
         }else{
-            echo "<script>location.href = '".url('/vote')."/".$id."'</script>";
+            echo "<script>location.href = '".url('/*********')."/".$id."'</script>";
         }
 
     }

@@ -16,7 +16,7 @@ class apiModel extends Model
         $this->DB = DB::connection('mysql');
     }
 
-    public function api_being_vote(){
+    public function api_being_*********(){
         $result_array = [];
         $question = [];
         $result = DB::table('question as q')
@@ -33,13 +33,13 @@ class apiModel extends Model
         if($result->first()){
             foreach ($result as $key => $value){
                 if($value->img){
-                    $value->img = 'https://prod-vote-image.nownews.com/baseToJPG/'.$value->question_seq.'-sm.jpg';
+                    $value->img = '*********/baseToJPG/'.$value->question_seq.'-sm.jpg';
                 }
                 
                 $question[$key]['question']['id'] = $value->question_seq;
                 $question[$key]['question']['title'] = str_replace('18禁', '', str_replace('PK', '', $value->title));
                 $question[$key]['question']['type'] = null;
-                $question[$key]['question']['url'] = url('/vote').'/'.$value->question_seq;
+                $question[$key]['question']['url'] = url('/*********').'/'.$value->question_seq;
                 $question[$key]['question']['img'] = $value->img;
                 $question[$key]['question']['desc'] = $value->desc_;
                 // $result_array[] = $question;
@@ -51,7 +51,7 @@ class apiModel extends Model
 
                 if($topic01){
                     if($topic01->img){
-                        $topic01->img = 'https://prod-vote-image.nownews.com/baseToJPG/'.$topic01->topic01_seq.'-sm.jpg';
+                        $topic01->img = '*********/baseToJPG/'.$topic01->topic01_seq.'-sm.jpg';
                     }
                     $question[$key]['topic01']['id'] = $topic01->topic01_seq;
                     $question[$key]['topic01']['title'] = $topic01->title;
@@ -70,7 +70,7 @@ class apiModel extends Model
                     $question_t2 = [];
                     foreach ($topic02 as $k => $val){
                         if($val->img){
-                            $val->img = 'https://prod-vote-image.nownews.com/baseToJPG/'.$val->topic02_seq.'-sm.jpg';
+                            $val->img = '*********/baseToJPG/'.$val->topic02_seq.'-sm.jpg';
                         }
 
                         $question[$key]['topic02'][$k]['id'] = $val->topic02_seq;
@@ -100,7 +100,7 @@ class apiModel extends Model
         // die();
     }
 
-    public function api_being_pk_vote(){
+    public function api_being_pk_*********(){
         $result_array = [];
         $question = [];
         $result = DB::table('question as q')
@@ -117,13 +117,13 @@ class apiModel extends Model
         if($result->first()){
             foreach ($result as $key => $value){
                 if($value->img){
-                    $value->img = 'https://prod-vote-image.nownews.com/baseToJPG/'.$value->question_seq.'-sm.jpg';
+                    $value->img = '*********/baseToJPG/'.$value->question_seq.'-sm.jpg';
                 }
                 
                 $question[$key]['question']['id'] = $value->question_seq;
                 $question[$key]['question']['title'] = str_replace('18禁', '', str_replace('PK', '', $value->title));
                 $question[$key]['question']['type'] = null;
-                $question[$key]['question']['url'] = url('/vote').'/'.$value->question_seq;
+                $question[$key]['question']['url'] = url('/*********').'/'.$value->question_seq;
                 $question[$key]['question']['img'] = $value->img;
                 $question[$key]['question']['desc'] = $value->desc_;
                 $question[$key]['question']['start_time'] = $value->question_date_s;
@@ -141,7 +141,7 @@ class apiModel extends Model
 
                 if($topic01){
                     if($topic01->img){
-                        $topic01->img = 'https://prod-vote-image.nownews.com/baseToJPG/'.$topic01->topic01_seq.'-sm.jpg';
+                        $topic01->img = '*********/baseToJPG/'.$topic01->topic01_seq.'-sm.jpg';
                     }
                     $question[$key]['topic01']['id'] = $topic01->topic01_seq;
                     $question[$key]['topic01']['title'] = $topic01->title;
@@ -164,7 +164,7 @@ class apiModel extends Model
                     $question_t2 = [];
                     foreach ($topic02 as $k => $val){
                         if($val->img){
-                            $val->img = 'https://prod-vote-image.nownews.com/baseToJPG/'.$val->topic02_seq.'-sm.jpg';
+                            $val->img = '*********/baseToJPG/'.$val->topic02_seq.'-sm.jpg';
                         }
 
                         $question[$key]['topic02'][$k]['id'] = $val->topic02_seq;

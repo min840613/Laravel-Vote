@@ -16,7 +16,7 @@ class Cors
      */
     public function handle(Request $request, Closure $next)
     {
-        $allowedOrigins = ['vote-backend.nownews.com', 'bobee.nownews.com'];
+        $allowedOrigins = ['*********-backend.*********.com', 'bobee.*********.com'];
         $origin = $request->header('host');
 
         if (in_array($origin, $allowedOrigins)) {
